@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: ##ecece9;
   --foreground: #171717;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sansMono: var(--font-sansMono);
+  --font-regular: var(--font-regular);
+  --font-book: var(--font-book);
+  --font-bandit: var(--font-bandit);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sansMono);
+}
+
+.menu {
+  visibility: hidden;
+}
+
+.shadow-text {
+  text-shadow: 0px 0.8em 0px var(--foreground);
+}
+
+.display {
+  @apply text-[clamp(90px,186px)] leading-[0.80] font-bandit uppercase;
+}
+
+.h1 {
+  @apply text-[clamp(2.5rem,6.125rem)] font-bandit uppercase;
+}
+
+.h2 {
+  @apply text-[clamp(54px,78px)] leading-[.85] font-bandit uppercase;
+}
+
+.h3 {
+  @apply text-[clamp(24px,50px)] font-bandit;
+}
+
+.h4 {
+  @apply text-[clamp(20px,40px)] font-book;
+}
+
+.p {
+  @apply text-[clamp(14px,18px)] font-sansMono;
+}
+
+.copy {
+  @apply text-[clamp(10px,12px)] font-sansMono;
 }
