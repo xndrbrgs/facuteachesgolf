@@ -7,7 +7,7 @@ export default function Home() {
     <main className="relative h-screen w-full overflow-x-hidden">
       <Navbar />
       <Hero />
-      <div className="absolute top-40 right-40">
+      <div className="absolute top-30 right-40">
         <CircleButton text="BOOK NOW!" size="w-32 h-32" />
       </div>
     </main>
