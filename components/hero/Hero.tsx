@@ -28,7 +28,7 @@ const Hero = () => {
         </video>
       </div>
       <div className="relative col-start-4 col-end-7 w-full border rounded-xl overflow-hidden hidden md:block md:h-[clamp(200px,560px)]">
-        <Image src={"/images/FacuSwing.webp"} alt="Facu swing image" fill className="object-cover" />
+        <Image src={"/images/FacuSwing.webp"} alt="Facu swing image" fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
       </div>
       <div className="col-start-7 col-end-10 w-full border rounded-xl overflow-hidden hidden md:block md:h-[clamp(200px,560px)]">
         <video
@@ -45,7 +45,7 @@ const Hero = () => {
         </video>
       </div>
       <div className="relative col-start-10 col-end-13 w-full border rounded-xl overflow-hidden hidden md:block md:h-[clamp(200px,560px)]">
-        <Image src={"/images/Hero.webp"} alt="Hero image" fill className="object-cover"/>
+        <Image src={"/images/Hero.webp"} alt="Hero image" fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
       </div>
     </section>
   );
