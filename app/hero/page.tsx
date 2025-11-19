@@ -21,7 +21,7 @@ export default function Home() {
   }, []);
   return (
     <main className="relative overflow-x-hidden">
-      <div className="fixed bottom-30 right-40 z-90">
+      <div className="fixed bottom-30 right-40 z-60">
         <CircleButton text="BOOK NOW!" size="w-32 h-32" />
       </div>
       <ImageHero />
