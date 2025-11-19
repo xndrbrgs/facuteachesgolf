@@ -37,7 +37,7 @@ body {
 }
 
 .h2 {
-  @apply text-[clamp(54px,78px)] leading-[.85] font-bandit uppercase;
+  @apply text-[clamp(54px,64px)] leading-[.95] font-bandit;
 }
 
 .h3 {

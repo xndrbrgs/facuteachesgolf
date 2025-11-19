@@ -64,7 +64,7 @@ const Navbar = () => {
                   />
                 </div>
               </div>
-              <div className="flex flex-col gap-y-2 mt-4">
+              <div className="flex flex-col gap-y-2 mt-4 uppercase">
                 <span className="h2 cursor-pointer">
                   <Underline href="https://calendly.com/facudelapenna1/60min">
                     book a lesson

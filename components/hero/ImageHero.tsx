@@ -1,37 +1,93 @@
-import Image from "next/image";
+"use client";
 import AppearText from "../anims/AppearText";
 
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useRef } from "react";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 const ImageHero = () => {
+  const container = useRef(null);
+
+  useGSAP(
+    () => {
+      if (!container.current) return;
+
+      const leftTextFirst = container.current.querySelector(".left-text-first");
+      const rightTextFirst =
+        container.current.querySelector(".right-text-first");
+      const leftTextSecond =
+        container.current.querySelector(".left-text-second");
+      const rightTextSecond =
+        container.current.querySelector(".right-text-second");
+
+      // Animate left text toward center
+      gsap.from(leftTextFirst, {
+        x: "-50%", // move toward center
+        ease: "none", // linear movement
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top bottom", // when section enters viewport
+          end: "bottom top", // when section leaves viewport
+          scrub: true, // ties animation to scroll position
+          markers: true, // for debugging
+        },
+      });
+
+      // Animate right text toward center
+      gsap.from(rightTextFirst, {
+        x: "50%", // move toward center
+        ease: "none",
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+          markers: true,
+        },
+      });
+      gsap.from(leftTextSecond, {
+        x: "-40%", // move toward center
+        ease: "none", // linear movement
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top bottom", // when section enters viewport
+          end: "bottom top", // when section leaves viewport
+          scrub: true, // ties animation to scroll position
+          markers: true, // for debugging
+        },
+      });
+
+      // Animate right text toward center
+      gsap.from(rightTextSecond, {
+        x: "40%", // move toward center
+        ease: "none",
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+          markers: true,
+        },
+      });
+    },
+    { scope: container }
+  );
+
   return (
-    <section className="relative h-[300vh] px-[clamp(8px,16px)] w-full">
-      <div className="grid grid-cols-12 gap-x-4 w-full">
-        <div className="fixed top-0 left-0 h-screen w-full flex brightness-90">
+    <section className="relative h-[300vh] w-full">
+      <div className="grid grid-cols-12 gap-x-4 w-full px-[clamp(8px,16px)]">
+        <div className="fixed top-0 left-0 h-screen w-full brightness-90">
           <video
-            className="flex-1 h-full object-cover"
+            className="h-full w-full object-cover"
             muted
             autoPlay
             loop
             preload="none"
           >
             <source src="/video/Hero.webm" type="video/webm" />
-          </video>
-          <video
-            className="flex-1 h-full object-cover"
-            muted
-            autoPlay
-            loop
-            preload="none"
-          >
-            <source src="/video/FacuInv.m4v" type="video/mp4" />
-          </video>
-          <video
-            className="flex-1 h-full object-cover"
-            muted
-            autoPlay
-            loop
-            preload="none"
-          >
-            <source src="/video/Rio.m4v" type="video/mp4" />
           </video>
         </div>
         <div className="col-span-12 text-center mb-8 mt-[clamp(56px,96px)] z-50">
@@ -44,7 +100,14 @@ const ImageHero = () => {
             game.{" "}
           </p>
         </div>
-        <div className="md:col-start-1 md:col-end-4 w-full  rounded-xl overflow-hidden md:h-[clamp(200px,560px)] h-full">
+        <div className="relative col-start-6 col-end-8 w-full rounded-xl overflow-hidden hidden md:block md:h-[clamp(200px,460px)] mt-16">
+          {/* <Image
+            src={"/images/FacuSwing.webp"}
+            alt="Facu swing image"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          /> */}
           <video
             width="1080"
             height="1080"
@@ -58,37 +121,40 @@ const ImageHero = () => {
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="relative col-start-4 col-end-7 w-full rounded-xl overflow-hidden hidden md:block md:h-[clamp(200px,560px)]">
-          <Image
-            src={"/images/FacuSwing.webp"}
-            alt="Facu swing image"
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+      </div>
+      <div className="relative h-[200vh] w-full ">
+        <div className="grid grid-cols-12 h-full justify-center items-center px-[clamp(8px,16px)]">
+          <div className="col-span-12 col-start-1 md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3">
+            <h2 className="h2 text-white">
+              Whether you're a beginner seeking fundamentals or an experienced
+              golfer looking to fine-tune your game, my personalized coaching
+              focuses on course management, swing mechanics, and mental
+              strategy.
+            </h2>
+          </div>
         </div>
-        <div className="col-start-7 col-end-10 w-full  rounded-xl overflow-hidden hidden md:block md:h-[clamp(200px,560px)]">
-          <video
-            width="1080"
-            height="1080"
-            autoPlay
-            muted
-            loop
-            preload="none"
-            className="brightness-75"
-          >
-            <source src="/video/Rio.m4v" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div className="relative col-start-10 col-end-13 w-full  rounded-xl overflow-hidden hidden md:block md:h-[clamp(200px,560px)]">
-          <Image
-            src={"/images/Hero.webp"}
-            alt="Hero image"
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+
+        {/* <div>
+            <div>US OPEN QUALIFYING - Sebastian Muñoz</div>
+            <div>LPGA - Danielle Kang</div>
+          </div> */}
+
+        <div
+          ref={container}
+          className="absolute bottom-0 left-0 w-full text-white z-20 grid grid-cols-12 justify-between items-center uppercase"
+        >
+          <p className="text-[clamp(8px,12px)] col-span-6 text-end py-4 px-[clamp(8px,16px)] left-text-first bg-black">
+            PGA TOUR - Tano Goya
+          </p>
+          <p className="text-[clamp(8px,12px)] col-span-6 text-start py-4 px-[clamp(8px,16px)] right-text-first bg-black">
+            KORN FERRY - Emilio Gonzalez
+          </p>
+          <p className="text-[clamp(8px,12px)] col-span-6 text-end py-4 px-[clamp(8px,16px)] left-text-second bg-black">
+            US OPEN QUALIFYING - Sebastian Muñoz
+          </p>
+          <p className="text-[clamp(8px,12px)] col-span-6 text-start py-4 px-[clamp(8px,16px)] right-text-second bg-black">
+            LPGA - Danielle Kang
+          </p>
         </div>
       </div>
     </section>
