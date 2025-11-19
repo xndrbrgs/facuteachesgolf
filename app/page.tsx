@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar/Navbar";
 
 export default function Home() {
   return (
-    <main className="relative h-screen w-full overflow-x-hidden">
+    <main className="relative w-full overflow-x-hidden">
       <Navbar />
       <Hero />
       <div className="absolute top-30 right-40">

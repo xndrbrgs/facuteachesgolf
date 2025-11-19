@@ -29,7 +29,7 @@ body {
 }
 
 .display {
-  @apply text-[clamp(80px,186px)] leading-[0.80] font-bandit uppercase;
+  @apply text-[clamp(80px,186px)] leading-[0.80] font-bandit uppercase mix-blend-difference;
 }
 
 .h1 {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/navbar/Navbar";
 
 const messinaSansRegular = localFont({
   src: "../public/fonts/MessinaSans-Regular.otf",
@@ -44,8 +45,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${messinaSansRegular.variable} ${messinaSansBook.variable} ${messinaSansMonoRegular.variable} ${banditCondensed.variable} antialiased`}
+        className={`${messinaSansRegular.variable} ${messinaSansBook.variable} ${messinaSansMonoRegular.variable} ${banditCondensed.variable} antialiased relative`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
