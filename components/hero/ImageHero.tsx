@@ -29,10 +29,9 @@ const ImageHero = () => {
         ease: "none", // linear movement
         scrollTrigger: {
           trigger: container.current,
-          start: "top bottom", // when section enters viewport
+          start: "top center", // when section enters viewport
           end: "bottom top", // when section leaves viewport
           scrub: true, // ties animation to scroll position
-          markers: true, // for debugging
         },
       });
 
@@ -42,10 +41,9 @@ const ImageHero = () => {
         ease: "none",
         scrollTrigger: {
           trigger: container.current,
-          start: "top bottom",
+          start: "top center",
           end: "bottom top",
           scrub: true,
-          markers: true,
         },
       });
       gsap.from(leftTextSecond, {
@@ -53,10 +51,9 @@ const ImageHero = () => {
         ease: "none", // linear movement
         scrollTrigger: {
           trigger: container.current,
-          start: "top bottom", // when section enters viewport
+          start: "top center", // when section enters viewport
           end: "bottom top", // when section leaves viewport
           scrub: true, // ties animation to scroll position
-          markers: true, // for debugging
         },
       });
 
@@ -66,10 +63,9 @@ const ImageHero = () => {
         ease: "none",
         scrollTrigger: {
           trigger: container.current,
-          start: "top bottom",
+          start: "top center",
           end: "bottom top",
           scrub: true,
-          markers: true,
         },
       });
     },
@@ -78,18 +74,18 @@ const ImageHero = () => {
 
   return (
     <section className="relative h-[300vh] w-full">
+      <div className="fixed top-0 left-0 h-screen w-full brightness-90">
+        <video
+          className="h-full w-full object-cover"
+          muted
+          autoPlay
+          loop
+          preload="none"
+        >
+          <source src="/video/Hero.webm" type="video/webm" />
+        </video>
+      </div>
       <div className="grid grid-cols-12 gap-x-4 w-full px-[clamp(8px,16px)]">
-        <div className="fixed top-0 left-0 h-screen w-full brightness-90">
-          <video
-            className="h-full w-full object-cover"
-            muted
-            autoPlay
-            loop
-            preload="none"
-          >
-            <source src="/video/Hero.webm" type="video/webm" />
-          </video>
-        </div>
         <div className="col-span-12 text-center mb-8 mt-[clamp(56px,96px)] z-50">
           <div className="display text-white">
             <AppearText>FACU TEACHES GOLF</AppearText>
@@ -123,7 +119,7 @@ const ImageHero = () => {
         </div>
       </div>
       <div className="relative h-[200vh] w-full ">
-        <div className="grid grid-cols-12 h-full justify-center items-center px-[clamp(8px,16px)]">
+        <div className="grid grid-cols-12 h-screen justify-center items-center px-[clamp(8px,16px)]">
           <div className="col-span-12 col-start-1 md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3">
             <h2 className="h2 text-white">
               Whether you're a beginner seeking fundamentals or an experienced
@@ -141,7 +137,7 @@ const ImageHero = () => {
 
         <div
           ref={container}
-          className="absolute bottom-0 left-0 w-full text-white z-20 grid grid-cols-12 justify-between items-center uppercase"
+          className="absolute bottom-0 left-0 w-full text-white grid grid-cols-12 justify-between items-center uppercase z-50"
         >
           <p className="text-[clamp(8px,12px)] col-span-6 text-end py-4 px-[clamp(8px,16px)] left-text-first bg-black">
             PGA TOUR - Tano Goya
