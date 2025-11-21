@@ -12,7 +12,7 @@ interface CircleButtonProps {
 const CircleButton: React.FC<CircleButtonProps> = ({
   text,
   size = "w-48 h-48",
-  bgColor = "bg-black",
+  bgColor = "bg-red-500",
   textColor = "text-white",
 }) => {
   return (

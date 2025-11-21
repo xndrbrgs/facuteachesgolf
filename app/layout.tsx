@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${messinaSansRegular.variable} ${messinaSansBook.variable} ${messinaSansMonoRegular.variable} ${banditCondensed.variable} antialiased relative`}
+        className={`${messinaSansRegular.variable} ${messinaSansBook.variable} ${messinaSansMonoRegular.variable} ${banditCondensed.variable} antialiased relative max-w-[96rem] mx-auto`}
       >
         <Navbar />
         {children}

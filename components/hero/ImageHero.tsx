@@ -97,13 +97,6 @@ const ImageHero = () => {
           </p>
         </div>
         <div className="relative col-start-6 col-end-8 w-full rounded-xl overflow-hidden hidden md:block md:h-[clamp(200px,460px)] mt-16">
-          {/* <Image
-            src={"/images/FacuSwing.webp"}
-            alt="Facu swing image"
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          /> */}
           <video
             width="1080"
             height="1080"

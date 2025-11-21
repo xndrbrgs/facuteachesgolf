@@ -44,8 +44,8 @@ const Navbar = () => {
     { scope: container }
   );
   return (
-    <nav className="fixed top-0 left-0 z-90 flex justify-between w-full p-[clamp(8px,16px)] bg-transparent">
-      <h3 className="font-bandit h3 uppercase mix-blend-difference">FTG</h3>
+    <nav className="fixed top-0 left-0 z-90 flex justify-between p-[clamp(16px,40px)] bg-transparent w-full">
+      <h3 className="font-bandit p uppercase text-white">FTG</h3>
       <div className="relative z-90" ref={container}>
         <div className="absolute top-0 right-0 menu border rounded-2xl w-[360px] md:w-[520px] h-[90vh] p-8 bg-white z-20">
           <div className="flex flex-col h-full justify-between">
@@ -111,7 +111,7 @@ const Navbar = () => {
         </div>
         <h3
           onClick={toggleTimeline}
-          className="h3 menu-text absolute top-0 right-0 z-10 cursor-pointer"
+          className="p menu-text absolute top-0 right-0 z-10 cursor-pointer text-white hover:text-black transition transform duration-300 py-1 px-4 bg-strong hover:bg-white rounded-sm"
         >
           MENU
         </h3>

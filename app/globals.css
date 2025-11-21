@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: ##ecece9;
-  --foreground: #171717;
+  --foreground: ##ecece9;
+  --background: #111111;
+  --strong: #323232;
+  --strongtext: #727268;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-strong: var(--strong);
+  --color-strongtext: var(--strongtext);
   --font-sansMono: var(--font-sansMono);
   --font-regular: var(--font-regular);
   --font-book: var(--font-book);
@@ -49,7 +53,7 @@ body {
 }
 
 .p {
-  @apply text-[clamp(14px,18px)] font-sansMono;
+  @apply text-[clamp(14px,16px)] leading-[1.2] font-sansMono;
 }
 
 .copy {

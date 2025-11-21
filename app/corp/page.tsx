@@ -19,8 +19,8 @@ export default function CorpPage() {
     requestAnimationFrame(raf);
   }, []);
   return (
-    <main className="relative overflow-x-hidden bg-black">
-      <div className="fixed bottom-30 right-40 z-60">
+    <main className="relative overflow-x-hidden bg-background">
+      <div className="fixed bottom-40 right-40 z-60">
         <CircleButton text="BOOK NOW!" size="w-32 h-32" />
       </div>
       <CorpHero />
