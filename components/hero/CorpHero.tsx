@@ -51,7 +51,7 @@ const CorpHero = () => {
         </div>
       </div>
       <div
-        className="absolute top-50 left-0 col-start-2 col-end-6 w-full rounded-sm overflow-hidden hidden md:block md:h-[clamp(420px,640px)] invisible"
+        className="absolute top-40 md:top-50 left-0 col-start-2 col-end-6 w-full rounded-sm overflow-hidden md:h-[clamp(420px,640px)] invisible z-10"
         ref={leftImageRef}
       >
         <Image
@@ -63,7 +63,7 @@ const CorpHero = () => {
         />
       </div>
       <div
-        className="absolute top-40 md:top-50 left-0 col-start-2 col-end-12 md:col-start-5 md:col-end-9 w-full rounded-sm overflow-hidden md:h-[clamp(420px,640px)] z-10 invisible"
+        className="absolute top-40 md:top-50 left-0 col-start-5 col-end-9 w-full rounded-sm overflow-hidden md:h-[clamp(420px,640px)] z-20 invisible"
         ref={videoRef}
       >
         <video
@@ -80,7 +80,7 @@ const CorpHero = () => {
         </video>
       </div>
       <div
-        className="absolute top-50 left-0 col-start-8 col-end-12 w-full rounded-sm overflow-hidden hidden  md:block md:h-[clamp(420px,640px)] invisible"
+        className="absolute top-40 md:top-50 left-0 col-start-8 col-end-12 w-full rounded-sm overflow-hidden md:h-[clamp(420px,640px)] invisible z-10"
         ref={rightImageRef}
       >
         <Image
@@ -92,7 +92,7 @@ const CorpHero = () => {
         />
       </div>
       <div
-        className="absolute bottom-0 left-0 flex text-white justify-between w-full z-30 mb-[clamp(32px,64px)] px-[clamp(16px,40px)]"
+        className="absolute bottom-0 left-0 flex text-white justify-between w-full z-40 mb-[clamp(32px,64px)] px-[clamp(16px,40px)]"
         ref={bottomText}
       >
         <div>
