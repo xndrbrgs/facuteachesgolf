@@ -3,6 +3,7 @@
 import CircleButton from "@/components/anims/Circle";
 import CorpHero from "@/components/hero/CorpHero";
 import WhoAmI from "@/components/hero/WhoAmI";
+import SchoolSection from "@/components/school/SchoolSection";
 import Lenis from "lenis";
 import { useEffect } from "react";
 
@@ -26,6 +27,7 @@ export default function CorpPage() {
       </div>
       <CorpHero />
       <WhoAmI />
+      {/* <SchoolSection /> */}
     </main>
   );
 }
