@@ -96,14 +96,26 @@ const CorpHero = () => {
         ref={bottomText}
       >
         <div>
-          <p className="p">
+          <p className="copy block md:hidden">
+            Elevate your brand <br />
+            with <span className="text-strongtext">
+              world-class
+            </span> <br /> golf schools and events.
+          </p>
+          <p className="p hidden md:block">
             Elevate your brand with <br />{" "}
             <span className="text-strongtext">world-class</span> golf schools{" "}
             <br /> and events.
           </p>
         </div>
         <div className="text-right">
-          <p className="p">
+          <p className="copy block md:hidden">
+            Ideal for organizations <br />
+            aiming to <span className="text-strongtext">inspire</span>, <br />{" "}
+            <span className="text-strongtext">connect</span>, and{" "}
+            <span className="text-strongtext">lead</span>.
+          </p>
+          <p className="p hidden md:block">
             Ideal for organizations <br />
             aiming to <span className="text-strongtext">inspire</span>, <br />{" "}
             <span className="text-strongtext">connect</span>, and{" "}
