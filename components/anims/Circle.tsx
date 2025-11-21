@@ -11,7 +11,6 @@ interface CircleButtonProps {
 
 const CircleButton: React.FC<CircleButtonProps> = ({
   text,
-  size = "w-48 h-48",
   bgColor = "bg-red-500",
   textColor = "text-white",
 }) => {
@@ -22,7 +21,7 @@ const CircleButton: React.FC<CircleButtonProps> = ({
       rel="noopener noreferrer"
     >
       <div
-        className={`${size} ${bgColor} ${textColor} rounded-full flex items-center justify-center uppercase cursor-pointer hover:scale-125 transition transform duration-300 p animate-[spin_8s_ease-in-out_infinite]`}
+        className={`${bgColor} ${textColor} rounded-full flex items-center justify-center uppercase cursor-pointer hover:scale-125 transition transform duration-300 p animate-[spin_8s_ease-in-out_infinite] size-[clamp(120px,128px)]`}
       >
         {text}
       </div>

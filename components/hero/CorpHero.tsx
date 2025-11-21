@@ -17,53 +17,53 @@ const CorpHero = () => {
     // Animate bottom text first
     tl.fromTo(
       bottomText.current,
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
+      { autoAlpha: 0, y: 100 },
+      { autoAlpha: 1, y: 0, duration: 1, ease: "power3.out" }
     )
 
       // Animate video next
       .fromTo(
         videoRef.current,
-        { opacity: 0, scale: 0.5 },
-        { opacity: 1, scale: 1, duration: 1, ease: "power3.out" }
+        { autoAlpha: 0, scale: 0.5 },
+        { autoAlpha: 1, scale: 1, duration: 1, ease: "power3.out" }
       )
 
       // Animate left image after video
       .fromTo(
         leftImageRef.current,
-        { x: 100, opacity: 0 },
-        { x: 0, duration: 1.2, opacity: 1, ease: "0.65, 0, 0.35, 1" }
+        { x: 100, autoAlpha: 0 },
+        { x: 0, duration: 1.2, autoAlpha: 1, ease: "0.65, 0, 0.35, 1" }
       )
 
       // Animate right image after left image
       .fromTo(
         rightImageRef.current,
-        { x: -100, opacity: 0 },
-        { x: 0, duration: 1.2, opacity: 1, ease: "0.65, 0, 0.35, 1" },
+        { x: -100, autoAlpha: 0 },
+        { x: 0, duration: 1.2, autoAlpha: 1, ease: "0.65, 0, 0.35, 1" },
         "<"
       );
   }, []);
   return (
     <section className="relative h-screen w-full px-[clamp(16px,40px)] grid grid-cols-12 overflow-hidden">
       <div className="relative pt-[clamp(56px,96px)] col-span-12">
-        <div className="relative w-full h-[clamp(64px,256px)] z-90">
+        <div className="relative w-full h-[clamp(64px,256px)] z-70">
           <FacuLogo />
         </div>
       </div>
       <div
-        className="absolute top-50 left-0 col-start-2 col-end-6 w-full rounded-sm overflow-hidden hidden md:block md:h-[clamp(420px,640px)]"
+        className="absolute top-50 left-0 col-start-2 col-end-6 w-full rounded-sm overflow-hidden hidden md:block md:h-[clamp(420px,640px)] invisible"
         ref={leftImageRef}
       >
         <Image
           src={"/images/Hero.webp"}
           alt="Facu swing image"
           fill
-          className="object-cover scale-75"
+          className="object-cover scale-75 brightness-90"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <div
-        className="absolute top-50 left-0 col-start-5 col-end-9 w-full rounded-sm overflow-hidden hidden md:block md:h-[clamp(420px,640px)] z-50"
+        className="absolute top-50 left-0 col-start-5 col-end-9 w-full rounded-sm overflow-hidden hidden md:block md:h-[clamp(420px,640px)] z-50 invisible"
         ref={videoRef}
       >
         <video
@@ -80,14 +80,14 @@ const CorpHero = () => {
         </video>
       </div>
       <div
-        className="absolute top-50 left-0 col-start-8 col-end-12 w-full rounded-sm overflow-hidden hidden md:block md:h-[clamp(420px,640px)]"
+        className="absolute top-50 left-0 col-start-8 col-end-12 w-full rounded-sm overflow-hidden hidden md:block md:h-[clamp(420px,640px)] invisible"
         ref={rightImageRef}
       >
         <Image
           src={"/images/FacuSwing.webp"}
           alt="Facu swing image"
           fill
-          className="object-cover scale-75"
+          className="object-cover scale-75 brightness-90"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>

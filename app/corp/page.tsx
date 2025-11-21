@@ -20,8 +20,8 @@ export default function CorpPage() {
   }, []);
   return (
     <main className="relative overflow-x-hidden bg-background">
-      <div className="fixed bottom-40 right-40 z-60">
-        <CircleButton text="BOOK NOW!" size="w-32 h-32" />
+      <div className="fixed bottom-[clamp(120px,160px)] right-[clamp(40px,160px)] z-60">
+        <CircleButton text="BOOK NOW!" />
       </div>
       <CorpHero />
     </main>
