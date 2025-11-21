@@ -92,7 +92,7 @@ const CorpHero = () => {
         />
       </div>
       <div
-        className="absolute bottom-0 left-0 flex text-white justify-between w-full mb-[clamp(32px,64px)] px-[clamp(16px,40px)]"
+        className="absolute bottom-0 left-0 flex text-white justify-between w-full z-30 mb-[clamp(32px,64px)] px-[clamp(16px,40px)]"
         ref={bottomText}
       >
         <div>
