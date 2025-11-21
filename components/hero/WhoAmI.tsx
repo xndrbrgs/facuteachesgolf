@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { useRef } from "react";
+import TourGallery from "../gallery/TourGallery";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
@@ -33,9 +34,9 @@ const WhoAmI = () => {
   }, []);
 
   return (
-    <section className="relative my-[clamp(80px,120px)] w-full h-[300vh]">
+    <section className="relative w-full">
       <div
-        className="sticky left-0 top-0 h-screen flex flex-col justify-center"
+        className="relative flex flex-col justify-center my-[clamp(80px,120px)]"
         ref={container}
       >
         <h1 className="h1">WHO AM I</h1>
@@ -52,9 +53,7 @@ const WhoAmI = () => {
           </span>
         </div>
       </div>
-      <div className="h-[200vh] w-full">
-        <div>IMAGE GALLERY</div>
-      </div>
+      <TourGallery />
     </section>
   );
 };
