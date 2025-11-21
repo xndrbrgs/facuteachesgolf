@@ -43,7 +43,7 @@ body {
 }
 
 .h1 {
-  @apply text-[clamp(2.5rem,6.125rem)] font-bandit uppercase;
+  @apply text-[clamp(2.5rem,6.125rem)] leading-[0.80] font-bandit uppercase;
 }
 
 .h2 {
@@ -51,11 +51,11 @@ body {
 }
 
 .h3 {
-  @apply text-[clamp(24px,50px)] font-bandit;
+  @apply text-[clamp(24px,50px)] leading-[.95] font-bandit;
 }
 
 .h4 {
-  @apply text-[clamp(20px,40px)] font-book;
+  @apply text-[clamp(20px,40px)] leading-[1.3] font-book;
 }
 
 .p {
