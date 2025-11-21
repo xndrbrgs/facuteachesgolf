@@ -17,17 +17,16 @@ const WhoAmI = () => {
 
     // Animate each word's opacity with stagger tied to scroll
     gsap.from(split.words, {
-      opacity: 0,
+      opacity: 0.2,
       color: "#999",
-      y: 20,
       stagger: {
-        each: 0.05,
+        each: 0.02,
         ease: "power1.out",
       },
       scrollTrigger: {
         trigger: container.current,
         start: "top 60%",
-        end: "bottom bottom",
+        end: "bottom 70%",
         scrub: true,
       },
     });
@@ -36,7 +35,7 @@ const WhoAmI = () => {
   return (
     <section className="relative w-full">
       <div
-        className="relative flex flex-col justify-center my-[clamp(80px,120px)]"
+        className="relative flex flex-col justify-center my-[clamp(80px,120px)] px-[clamp(16px,40px)]"
         ref={container}
       >
         <h1 className="h1">WHO AM I</h1>

@@ -59,7 +59,8 @@ const TourGallery = () => {
         .to(
           "#img4",
           {
-            y: 50,
+            x: 20,
+            y: -250,
             scrollTrigger: {
               trigger: container.current,
               start: "top bottom",
@@ -68,13 +69,25 @@ const TourGallery = () => {
             },
           },
           "<"
-        );
+        )
+        .to(container.current, {
+          backgroundColor: "#f4f4ea",
+          scrollTrigger: {
+            trigger: container.current,
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true,
+          },
+        });
     },
     { scope: container }
   );
 
   return (
-    <div className="h-screen sm:h-[200vh] w-full" ref={container}>
+    <div
+      className="h-screen sm:h-[140vh] w-full px-[clamp(16px,40px)]"
+      ref={container}
+    >
       <div className="relative grid grid-cols-12">
         <div className="relative col-start-1 col-end-10 sm:col-end-5 h-[clamp(340px,620px)] z-10">
           <Image

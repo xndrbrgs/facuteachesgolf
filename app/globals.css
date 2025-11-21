@@ -5,6 +5,7 @@
   --background: #111111;
   --strong: #323232;
   --strongtext: #727268;
+  --grayback: #f4f4ea;
 }
 
 @theme inline {
@@ -12,6 +13,7 @@
   --color-foreground: var(--foreground);
   --color-strong: var(--strong);
   --color-strongtext: var(--strongtext);
+  --color-grayback: var(--grayback);
   --font-sansMono: var(--font-sansMono);
   --font-regular: var(--font-regular);
   --font-book: var(--font-book);

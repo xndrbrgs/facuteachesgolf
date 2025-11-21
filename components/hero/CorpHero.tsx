@@ -44,7 +44,7 @@ const CorpHero = () => {
       );
   }, []);
   return (
-    <section className="relative h-screen w-full grid grid-cols-12 overflow-hidden">
+    <section className="relative h-screen w-full grid grid-cols-12 overflow-hidden px-[clamp(16px,40px)]">
       <div className="relative pt-[clamp(56px,96px)] col-span-12">
         <div className="relative w-full h-[clamp(64px,256px)] z-70">
           <FacuLogo />
@@ -92,7 +92,7 @@ const CorpHero = () => {
         />
       </div>
       <div
-        className="absolute bottom-0 left-0 flex text-white justify-between w-full z-40 mb-[clamp(32px,64px)]"
+        className="absolute bottom-0 left-0 flex text-white justify-between w-full z-40 mb-[clamp(32px,64px)] px-[clamp(16px,40px)]"
         ref={bottomText}
       >
         <div>
