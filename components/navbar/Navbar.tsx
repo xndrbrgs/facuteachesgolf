@@ -45,7 +45,7 @@ const Navbar = () => {
   );
   return (
     <nav className="fixed top-0 left-0 z-90 flex justify-between p-[clamp(16px,40px)] bg-transparent w-full">
-      <h3 className="font-bandit p uppercase text-white">FTG</h3>
+      <p className="font-bandit p uppercase text-white">FTG</p>
       <div className="relative z-90" ref={container}>
         <div className="absolute top-0 right-0 menu border rounded-2xl w-[360px] md:w-[520px] h-[90vh] p-8 bg-white z-20">
           <div className="flex flex-col h-full justify-between">
