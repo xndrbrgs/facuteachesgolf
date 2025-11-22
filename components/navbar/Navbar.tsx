@@ -54,7 +54,7 @@ const Navbar = () => {
                 <h3 className="h3">[ MENU ]</h3>
                 <div
                   onClick={toggleTimeline}
-                  className="relative cursor-pointer bg-black p-2 rounded-md hover:scale-105 transition transform duration-150"
+                  className="relative cursor-pointer bg-black p-2 rounded-md hover:scale-105 hover:bg-black/80 transition transform duration-150"
                 >
                   <Image
                     src={"/images/svg/x.svg"}

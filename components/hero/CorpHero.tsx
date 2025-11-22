@@ -51,7 +51,7 @@ const CorpHero = () => {
         </div>
       </div>
       <div
-        className="absolute top-40 md:top-50 left-0 col-start-2 col-end-6 w-full rounded-sm overflow-hidden md:h-[clamp(420px,640px)] invisible z-10"
+        className="absolute top-40 md:top-20 left-0 col-start-2 col-end-6 w-full rounded-sm overflow-hidden md:h-[clamp(420px,640px)] invisible z-10"
         ref={leftImageRef}
       >
         <Image
@@ -63,7 +63,7 @@ const CorpHero = () => {
         />
       </div>
       <div
-        className="absolute top-40 md:top-50 left-0 col-start-5 col-end-9 w-full rounded-sm overflow-hidden md:h-[clamp(420px,640px)] z-20 invisible"
+        className="absolute top-40 md:top-20 left-0 col-start-5 col-end-9 w-full rounded-sm overflow-hidden md:h-[clamp(420px,640px)] z-20 invisible"
         ref={videoRef}
       >
         <video
@@ -80,7 +80,7 @@ const CorpHero = () => {
         </video>
       </div>
       <div
-        className="absolute top-40 md:top-50 left-0 col-start-8 col-end-12 w-full rounded-sm overflow-hidden md:h-[clamp(420px,640px)] invisible z-10"
+        className="absolute top-40 md:top-20 left-0 col-start-8 col-end-12 w-full rounded-sm overflow-hidden md:h-[clamp(420px,640px)] invisible z-10"
         ref={rightImageRef}
       >
         <Image

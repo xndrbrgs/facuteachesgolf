@@ -21,13 +21,13 @@ export default function CorpPage() {
     requestAnimationFrame(raf);
   }, []);
   return (
-    <main className="relative overflow-x-hidden bg-background text-white">
+    <main className="relative overflow-x-hidden bg-background text-white w-full">
       <div className="fixed bottom-[clamp(120px,160px)] right-[clamp(40px,160px)] z-80">
         <CircleButton text="BOOK NOW!" />
       </div>
       <CorpHero />
       <WhoAmI />
-      {/* <SchoolSection /> */}
+      <SchoolSection />
     </main>
   );
 }

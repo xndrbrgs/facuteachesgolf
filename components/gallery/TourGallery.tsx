@@ -85,7 +85,7 @@ const TourGallery = () => {
 
   return (
     <div
-      className="h-screen sm:h-[140vh] w-full px-[clamp(16px,40px)]"
+      className="h-screen sm:h-[180vh] w-full px-[clamp(16px,40px)]"
       ref={container}
     >
       <div className="relative grid grid-cols-12">
