@@ -46,7 +46,7 @@ const SchoolSection = () => {
     { scope: container }
   );
   return (
-    <section className="relative bg-[#f4f4ea] text-black w-full px-[clamp(16px,40px)] ">
+    <section className="relative bg-[#f4f4ea] text-black w-full px-[clamp(16px,40px)] pb-[clamp(80px,120px)]">
       <div className="flex  justify-between items-center ">
         <h1 className="h1">GOLF SCHOOLS</h1>
         <div className="flex flex-col gap-y-2">
@@ -73,7 +73,7 @@ const SchoolSection = () => {
               Your browser does not support the video tag.
             </video>
             <div className="absolute bottom-0 left-0  w-full p-[clamp(8px,16px)] ">
-              <h3 className="h3 text-white z-20">FACU INVITATIONAL</h3>
+              <h3 className="h3 text-white z-20">FACU INVITATIONAL 2025</h3>
             </div>
           </div>
         </div>

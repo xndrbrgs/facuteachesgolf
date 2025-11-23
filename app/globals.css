@@ -45,7 +45,7 @@ body {
 }
 
 .h1 {
-  @apply text-[clamp(2.5rem,6.125rem)] leading-[0.80] font-bandit uppercase;
+  @apply text-[clamp(2.5rem,6.125rem)] leading-[0.86] font-bandit uppercase;
 }
 
 .h2 {
