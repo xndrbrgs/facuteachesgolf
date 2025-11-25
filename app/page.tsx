@@ -1,6 +1,7 @@
 "use client";
 
 import CircleButton from "@/components/anims/Circle";
+import Delivery from "@/components/delivery/Delivery";
 import VideoSection from "@/components/gallery/VideoSection";
 import CorpHero from "@/components/hero/CorpHero";
 import WhoAmI from "@/components/hero/WhoAmI";
@@ -27,9 +28,10 @@ export default function HomePage() {
         <CircleButton text="BOOK NOW!" />
       </div>
       <CorpHero />
+      <Delivery />
       <WhoAmI />
-      <SchoolSection />
       <VideoSection />
+      <SchoolSection />
     </main>
   );
 }

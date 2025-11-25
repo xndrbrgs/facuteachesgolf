@@ -46,7 +46,7 @@ const SchoolSection = () => {
     { scope: container }
   );
   return (
-    <section className="relative bg-[#f4f4ea] text-black w-full px-[clamp(16px,40px)] pb-[clamp(80px,120px)]">
+    <section className="relative bg-[#f4f4ea] text-black w-full px-[clamp(16px,40px)] py-[clamp(80px,120px)]">
       <div className="flex  justify-between items-center ">
         <h1 className="h1">GOLF SCHOOLS</h1>
         <div className="flex flex-col gap-y-2">

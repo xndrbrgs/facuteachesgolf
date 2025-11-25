@@ -52,7 +52,6 @@ const WhoAmI = () => {
           </span>
         </div>
       </div>
-      <TourGallery />
     </section>
   );
 };
