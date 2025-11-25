@@ -70,9 +70,11 @@ const CorpHero = () => {
           width="1080"
           height="1080"
           autoPlay
+          playsInline
+          controls={false}
           muted
           loop
-          preload="none"
+          preload="metadata"
           className="brightness-75 object-cover"
         >
           <source src="/video/FacuInv.m4v" type="video/mp4" />

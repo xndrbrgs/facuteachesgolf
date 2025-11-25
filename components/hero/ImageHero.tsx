@@ -79,6 +79,8 @@ const ImageHero = () => {
           className="h-full w-full object-cover"
           muted
           autoPlay
+          playsInline
+          controls={false}
           loop
           preload="none"
         >

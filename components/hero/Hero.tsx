@@ -18,6 +18,8 @@ const Hero = () => {
           width="1080"
           height="1080"
           autoPlay
+          playsInline
+          controls={false}
           muted
           loop
           preload="none"
@@ -35,6 +37,8 @@ const Hero = () => {
           width="1080"
           height="1080"
           autoPlay
+          playsInline
+          controls={false}
           muted
           loop
           preload="none"

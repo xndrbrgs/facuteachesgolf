@@ -38,6 +38,8 @@ const VideoSection = () => {
           autoPlay
           muted
           loop
+          playsInline
+          controls={false}
           preload="none"
           className="brightness-75 object-cover size-full"
         >
