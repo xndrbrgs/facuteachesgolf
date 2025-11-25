@@ -51,7 +51,7 @@ const CorpHero = () => {
         </div>
       </div>
       <div
-        className="absolute top-40 md:top-20 left-0 col-start-2 col-end-6 w-full rounded-sm overflow-hidden md:h-[clamp(420px,640px)] invisible z-10"
+        className="absolute top-[clamp(160px, 200px)] md:top-20 left-0 col-start-2 col-end-6 w-full rounded-sm overflow-hidden md:h-[clamp(420px,640px)] invisible z-10"
         ref={leftImageRef}
       >
         <Image
@@ -63,7 +63,7 @@ const CorpHero = () => {
         />
       </div>
       <div
-        className="absolute top-40 md:top-20 left-0 col-start-5 col-end-9 w-full rounded-sm overflow-hidden md:h-[clamp(420px,640px)] z-20 invisible"
+        className="absolute top-40 md:top-20 left-0 col-span-12 md:col-start-5 md:col-end-9 w-full rounded-sm overflow-hidden md:h-[clamp(420px,640px)] z-20 invisible"
         ref={videoRef}
       >
         <video

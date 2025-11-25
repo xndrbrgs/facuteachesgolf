@@ -36,7 +36,7 @@ const SchoolSection = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: container.current,
-          start: "top 80%", // when container enters viewport
+          start: "top 70%", // when container enters viewport
           end: "bottom bottom", // when container leaves viewport
           scrub: true, // ties animation to scroll
           once: true,
