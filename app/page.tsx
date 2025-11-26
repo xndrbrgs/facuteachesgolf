@@ -10,8 +10,8 @@ import SchoolSection from "@/components/school/SchoolSection";
 export default function HomePage() {
   return (
     <main className="relative overflow-x-hidden bg-background text-white w-full">
-      <div className="fixed bottom-[clamp(120px,160px)] right-[clamp(0px,80px)] z-80">
-        <CircleButtonAnim text="Book Now" />
+      <div className="fixed bottom-[clamp(120px,160px)] right-[clamp(40px,80px)] z-80">
+        <CircleButtonAnim text="Click Here To Book Now!" />
       </div>
       <CorpHero />
       <Delivery />
