@@ -65,7 +65,7 @@ const CorpHero = () => {
         />
       </div>
       <div
-        className="absolute top-40 md:top-20 left-0 col-span-12 md:col-start-5 md:col-end-9 w-full rounded-sm overflow-hidden md:h-[clamp(420px,640px)] z-20 invisible brightness-75 md:brightness-100"
+        className="absolute top-40 md:top-20 left-0 col-span-12 md:col-start-5 md:col-end-9 w-full rounded-sm overflow-hidden md:h-[clamp(420px,640px)] z-20 invisible brightness-85 md:brightness-100"
         ref={videoRef}
       >
         <video

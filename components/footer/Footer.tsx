@@ -26,7 +26,7 @@ const Footer = () => {
           end: "bottom bottom",
         },
         y: 100,
-        opacity: 0.2,
+        opacity: 0,
         duration: 1.2,
         ease: "power3.out",
       });
