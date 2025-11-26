@@ -47,19 +47,19 @@ const SchoolSection = () => {
   );
   return (
     <section className="relative bg-[#f4f4ea] text-black w-full px-[clamp(16px,40px)] py-[clamp(80px,120px)]">
-      <div className="flex  justify-between items-center ">
+      <div className="flex flex-col md:flex-row  md:justify-between ">
         <h1 className="h1">GOLF SCHOOLS</h1>
-        <div className="flex flex-col gap-y-2">
-          <p className="p uppercase">Choose Your Path to Better Golf</p>
-          <span className="copy text-end">
+        <div className="flex flex-col gap-y-2 pt-4 md:pt-0 text-start md:text-end">
+          <p className="p">Choose Your Path to Better Golf</p>
+          <span className="copy text-start md:text-end">
             From a focused one-day boost <br /> to a complete three-day
             transformation
           </span>
         </div>
       </div>
       <div className="flex flex-col md:flex-row gap-x-4 h-full md:h-[clamp(360px,620px)] my-[clamp(20px,40px)]">
-        <div className="rounded-2xl  w-1/3 overflow-hidden">
-          <div className="relative h-full brightness-95 z-10">
+        <div className="rounded-2xl  md:w-1/3 w-full overflow-hidden">
+          <div className="relative h-[30rem] md:h-full brightness-95 z-10">
             <video
               width="1080"
               height="1080"
@@ -69,18 +69,18 @@ const SchoolSection = () => {
               muted
               loop
               preload="none"
-              className="brightness-75 object-cover"
+              className="brightness-75 object-fit md:object-cover"
             >
               <source src="/video/Rio.m4v" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div className="absolute bottom-0 left-0  w-full p-[clamp(8px,16px)] ">
+            <div className="absolute bottom-0 left-0  w-full p-4 ">
               <h3 className="h3 text-white z-20">FACU INVITATIONAL 2025</h3>
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-y-4 w-2/3" ref={container}>
-          <div className="relative bg-white  rounded-2xl h-1/2 p-[clamp(16px,24px)]">
+        <div className="flex flex-col gap-y-4 mt-4 md:mt-0 w-full md:w-2/3" ref={container}>
+          <div className="relative bg-white  rounded-2xl h-1/2 p-[clamp(24px,32px)]">
             <div className="flex flex-col gap-y-5">
               <span className="h3 uppercase">1-Day Golf School</span>
               <div className="flex flex-col gap-y-2">
@@ -101,7 +101,7 @@ const SchoolSection = () => {
               />
             </div>
           </div>
-          <div className=" relative bg-black text-white rounded-2xl h-1/2 p-[clamp(16px,24px)]">
+          <div className=" relative bg-black text-white rounded-2xl h-1/2 p-[clamp(24px,32px)]">
             <div className="flex flex-col gap-y-5">
               <span className="h3 uppercase">3-Day Golf School</span>
               <div className="flex flex-col gap-y-2">
