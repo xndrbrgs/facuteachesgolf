@@ -1,5 +1,6 @@
 import CircleButton from "@/components/anims/Circle";
 import Delivery from "@/components/delivery/Delivery";
+import Footer from "@/components/footer/Footer";
 import VideoSection from "@/components/gallery/VideoSection";
 import CorpHero from "@/components/hero/CorpHero";
 import WhoAmI from "@/components/hero/WhoAmI";
@@ -18,6 +19,7 @@ export default function HomePage() {
       <VideoSection />
       <Reviews />
       <SchoolSection />
+      <Footer />
     </main>
   );
 }
