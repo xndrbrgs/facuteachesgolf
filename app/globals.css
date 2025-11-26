@@ -40,6 +40,35 @@ body {
   text-shadow: 0px 0.8em 0px var(--foreground);
 }
 
+
+.blur-container {
+  position: relative;
+}
+
+.blur-container::before,
+.blur-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px; /* adjust width for blur size */
+  z-index: 10;
+  pointer-events: none;
+}
+
+.blur-container::before {
+  left: 0;
+  background: linear-gradient(to right, #f4f4ea, transparent);
+  filter: blur(20px);
+}
+
+.blur-container::after {
+  right: 0;
+  background: linear-gradient(to left, #f4f4ea, transparent);
+  filter: blur(20px);
+}
+
+
 .display {
   @apply text-[clamp(80px,186px)] leading-[0.80] font-bandit uppercase mix-blend-difference;
 }

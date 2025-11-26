@@ -1,4 +1,4 @@
-import Image from "next/image";
+"use client";
 import CounterUp from "../anims/CounterUp";
 import ImageParallax from "../anims/ImageParallax";
 import FadeSwiper from "../anims/Swiper";

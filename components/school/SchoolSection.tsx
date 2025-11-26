@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -79,7 +81,10 @@ const SchoolSection = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-y-4 mt-4 md:mt-0 w-full md:w-2/3" ref={container}>
+        <div
+          className="flex flex-col gap-y-4 mt-4 md:mt-0 w-full md:w-2/3"
+          ref={container}
+        >
           <div className="relative bg-white  rounded-2xl h-1/2 p-[clamp(24px,32px)]">
             <div className="flex flex-col gap-y-5">
               <span className="h3 uppercase">1-Day Golf School</span>

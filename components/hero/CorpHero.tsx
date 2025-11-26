@@ -1,3 +1,5 @@
+"use client";
+
 import FacuLogo from "../anims/FacuLogo";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";

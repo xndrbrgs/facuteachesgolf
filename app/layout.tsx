@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
+import { ReactLenis } from "@/lib/lenis/lenis";
 
 const messinaSansRegular = localFont({
   src: "../public/fonts/MessinaSans-Regular.otf",
@@ -44,12 +45,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${messinaSansRegular.variable} ${messinaSansBook.variable} ${messinaSansMonoRegular.variable} ${banditCondensed.variable} antialiased relative max-w-[96rem] mx-auto`}
-      >
-        <Navbar />
-        {children}
-      </body>
+      <ReactLenis root>
+        <body
+          className={`${messinaSansRegular.variable} ${messinaSansBook.variable} ${messinaSansMonoRegular.variable} ${banditCondensed.variable} antialiased relative max-w-[96rem] mx-auto`}
+        >
+          <Navbar />
+          {children}
+        </body>
+      </ReactLenis>
     </html>
   );
 }
