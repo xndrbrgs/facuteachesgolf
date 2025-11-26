@@ -119,8 +119,8 @@ const Footer = () => {
             <FacuLogo />
           </div>
         </div>
-        <div className="col-span-12 pb-6">
-          <div className="flex w-full justify-between">
+        <div className="col-span-12 pb-6 pt-2 md:pt-0">
+          <div className="flex md:flex-row flex-col w-full justify-between">
             <p className="copy">
               Copyright © {new Date().getFullYear()} Facu Teaches Golf | All
               rights reserved
