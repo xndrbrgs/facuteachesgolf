@@ -11,13 +11,22 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Reviews = () => {
   const reviewsRef = useRef(null);
+  const reviewBoxRef = useRef(null);
 
-  useGSAP(
-    () => {
-      gsap.from(reviewsRef.current, {
+  useGSAP(() => {
+    const tl = gsap.timeline();
+
+    // Animate bottom text first
+    tl.fromTo(
+      reviewsRef.current,
+      {
         scaleY: 0,
         transformOrigin: "top",
         opacity: 0,
+      },
+      {
+        scaleY: 1,
+        opacity: 1,
         ease: "power2.out",
         scrollTrigger: {
           trigger: reviewsRef.current,
@@ -26,10 +35,21 @@ const Reviews = () => {
           scrub: true,
           once: true,
         },
-      });
-    },
-    { scope: reviewsRef }
-  );
+      }
+    );
+    tl.fromTo(
+      reviewBoxRef.current,
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 3,
+        ease: "power2.out",
+      },
+      ">" // This ensures it plays after the previous animation completes
+    );
+  });
   return (
     <section className="relative bg-[#f4f4ea] text-black w-full px-[clamp(16px,40px)] pt-[clamp(80px,120px)]">
       <div className="flex flex-col md:flex-row  md:justify-between ">
@@ -45,8 +65,11 @@ const Reviews = () => {
         className="w-full mt-[clamp(20px,40px)] grid grid-cols-12"
         ref={reviewsRef}
       >
-        <div className="relative col-span-12 overflow-hidden bg-white  rounded-2xl p-[clamp(24px,32px)]">
-          <div className="relative blur-container z-10">
+        <div
+          className="relative col-span-12 overflow-hidden bg-white  rounded-2xl p-[clamp(24px,32px)]"
+          ref={reviewBoxRef}
+        >
+          <div className="relative">
             <GoogleReviewsWidget instanceId="1x6h7fWePq65zDB3QbWs" />
           </div>
         </div>
