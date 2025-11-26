@@ -29,6 +29,10 @@ const Footer = () => {
         opacity: 0,
         duration: 1.2,
         ease: "power3.out",
+        stagger: {
+          each: 0.02,
+          ease: "power3.out",
+        },
       });
     },
     { scope: footerRef }
