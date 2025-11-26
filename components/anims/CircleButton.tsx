@@ -25,23 +25,28 @@ const CircleToListButton: React.FC<CircleToListProps> = ({
   textColor = "text-white",
   options = [
     {
-      label: "30-min Session",
-      link: "https://buy.stripe.com/option1",
+      label: "1-Hour Session",
+      link: "https://calendly.com/facudelapenna1/60min",
       color: "bg-black",
     },
     {
-      label: "60-min Session",
+      label: "Corporate Event",
       link: "https://buy.stripe.com/option2",
       color: "bg-black",
     },
     {
-      label: "Virtual Session",
+      label: "1-Day Program",
+      link: "https://buy.stripe.com/option2",
+      color: "bg-black",
+    },
+    {
+      label: "3-Day Program",
       link: "https://buy.stripe.com/option3",
       color: "bg-black",
     },
     {
       label: "Skillest Session",
-      link: "https://buy.stripe.com/option4",
+      link: "https://skillest.com/@facuteachesgolf",
       color: "bg-black",
     },
   ],
@@ -173,7 +178,7 @@ const CircleToListButton: React.FC<CircleToListProps> = ({
           onKeyDown={handleKeyDown}
           aria-expanded={expanded}
           aria-controls="booking-options"
-          className={`${bgColor} ${textColor} uppercase font-semibold cursor-pointer  duration-200 shadow-md rounded-full w-28 h-28 flex items-center justify-center  hover:scale-125 transition transform`}
+          className={`${bgColor} ${textColor} uppercase font-semibold cursor-pointer  duration-200 shadow-md rounded-full size-[clamp(120px,128px)] flex items-center justify-center  hover:scale-125 transition transform`}
         >
           <span className="pointer-events-none">
             {expanded ? "Choose an option" : text}
