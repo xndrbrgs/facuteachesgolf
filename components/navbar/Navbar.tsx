@@ -76,9 +76,6 @@ const Navbar = () => {
                 <span className="h2 cursor-pointer">
                   <Underline href="my-story">my story</Underline>
                 </span>
-                <span className="h2 cursor-pointer">
-                  <Underline href="contact">contact</Underline>
-                </span>
               </div>
             </div>
             <div>
