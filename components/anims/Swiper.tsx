@@ -14,7 +14,7 @@ export default function FadeSwiper() {
       modules={[EffectFade, Autoplay]}
       effect="fade"
       fadeEffect={{ crossFade: true }}
-      autoplay={{ delay: 3000 }}
+      autoplay={{ delay: 1500 }}
       loop
       spaceBetween={30}
       className="h-16 w-1/2 self-end"

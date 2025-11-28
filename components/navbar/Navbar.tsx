@@ -66,12 +66,15 @@ const Navbar = () => {
               </div>
               <div className="flex flex-col gap-y-2 mt-4 uppercase">
                 <span className="h2 cursor-pointer">
+                  <Underline href="/">Home</Underline>
+                </span>
+                <span className="h2 cursor-pointer">
                   <Underline href="https://calendly.com/facudelapenna1/60min">
                     book a lesson
                   </Underline>
                 </span>
                 <span className="h2 cursor-pointer">
-                  <Underline href="services">classes</Underline>
+                  <Underline href="classes">classes</Underline>
                 </span>
                 <span className="h2 cursor-pointer">
                   <Underline href="my-story">my story</Underline>
