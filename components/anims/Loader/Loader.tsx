@@ -8,9 +8,7 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
 
-import { usePathname } from "next/navigation";
-
-const Loader = () => {
+const Loader = ({ onComplete }: { onComplete: () => void }) => {
   const imageRef = useRef(null);
   const imageOverlay = useRef(null);
   const blackOverlay = useRef(null);
@@ -21,23 +19,12 @@ const Loader = () => {
   const img3 = useRef(null);
   const img4 = useRef(null);
 
-  const pathname = usePathname();
-  const [visible, setVisible] = useState(true);
-
-  useEffect(() => {
-    // Only show loader on homepage and only once per session
-    const hasPlayed = sessionStorage.getItem("introPlayed");
-    if (pathname !== "/" || hasPlayed) {
-      setVisible(false);
-    } else {
-      sessionStorage.setItem("introPlayed", "true");
-    }
-  }, [pathname]);
-
   useGSAP(() => {
-    if (!visible) return;
-
-    const mainTl = gsap.timeline();
+    const mainTl = gsap.timeline({
+      onComplete: () => {
+        onComplete(); // Show homepage content after animation finishes
+      },
+    });
 
     // Main animations (text + overlay)
     mainTl.fromTo(
@@ -90,14 +77,13 @@ const Loader = () => {
       blackOverlay.current,
       { scaleY: 0, transformOrigin: "bottom" },
       { scaleY: 1, ease: "0.83, 0, 0.17, 1", duration: 1.2 }
-      // optional delay
     );
-  }, [visible]);
 
-  if (!visible) return null;
+    mainTl.kill();
+  }, []);
 
   return (
-    <section className="h-screen w-full fixed z-[999] bg-[#ecece9]">
+    <section className="h-screen w-full fixed top-0 left-0 z-[999] bg-[#ecece9]">
       {/* Overlay that grows from bottom → top */}
       <div
         ref={blackOverlay}
@@ -108,7 +94,7 @@ const Loader = () => {
       <div className="relative grid grid-cols-12 h-full items-center justify-center">
         <div className="col-start-6 col-end-8">
           <div
-            className="flex justify-between w-full mb-2 invisible"
+            className="flex justify-between w-full mb-2 invisible text-black"
             ref={textRef}
           >
             <p className="copy uppercase font-bold">Facu Teaches Golf</p>
