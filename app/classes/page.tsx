@@ -5,6 +5,7 @@ import FacuLogo from "@/components/anims/FacuLogo";
 import ClassHero from "@/components/classes/ClassHero";
 import ClassList from "@/components/classes/ClassList";
 import OneDayClass from "@/components/classes/ClassList";
+import ClassesMenu from "@/components/classes/ListClass";
 import Footer from "@/components/footer/Footer";
 import Image from "next/image";
 
@@ -15,7 +16,8 @@ const ServicesPage = () => {
         <CircleButtonAnim text="Click Here To Book Now!" />
       </div>
       <ClassHero />
-      <ClassList />
+      {/* <ClassList /> */}
+      <ClassesMenu />
       <Footer />
     </main>
   );
