@@ -63,7 +63,7 @@ const Footer = () => {
               </Underline>
             </span>
             <span className="p cursor-pointer">
-              <Underline bg="bg-white" href="services">
+              <Underline bg="bg-white" href="classes">
                 classes
               </Underline>
             </span>

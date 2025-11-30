@@ -1,5 +1,10 @@
+"use client";
+
 import CircleButtonAnim from "@/components/anims/CircleButton";
+import FacuLogo from "@/components/anims/FacuLogo";
+import ClassHero from "@/components/classes/ClassHero";
 import Footer from "@/components/footer/Footer";
+import Image from "next/image";
 
 const ServicesPage = () => {
   return (
@@ -7,9 +12,7 @@ const ServicesPage = () => {
       <div className="fixed bottom-[clamp(120px,160px)] right-[clamp(40px,80px)] z-80">
         <CircleButtonAnim text="Click Here To Book Now!" />
       </div>
-      <section className="h-screen w-full text-black bg-[#ecece9]">
-        HELLO
-      </section>
+      <ClassHero />
       <Footer />
     </main>
   );

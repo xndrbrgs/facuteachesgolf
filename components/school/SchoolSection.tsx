@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
+import Link from "next/link";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -86,8 +87,11 @@ const SchoolSection = () => {
           ref={container}
         >
           <div className="relative bg-white  rounded-2xl h-1/2 p-[clamp(24px,32px)]">
-            <div className="flex flex-col gap-y-5">
-              <span className="h3 uppercase">1-Day Golf School</span>
+            <div className="flex flex-col gap-y-5  w-ful">
+              <div className="flex w-full justify-between">
+                <span className="h3 uppercase">1-Day Golf School</span>
+                <span className="h3 uppercase">$500-$2000</span>
+              </div>
               <div className="flex flex-col gap-y-2">
                 {OneDayClasses.map((item, index) => (
                   <div key={index} className="flex items-center">
@@ -108,7 +112,10 @@ const SchoolSection = () => {
           </div>
           <div className=" relative bg-black text-white rounded-2xl h-1/2 p-[clamp(24px,32px)]">
             <div className="flex flex-col gap-y-5">
-              <span className="h3 uppercase">3-Day Golf School</span>
+              <div className="flex w-full justify-between">
+                <span className="h3 uppercase">3-Day Golf School</span>
+                <span className="h3 uppercase">$1000-$5000</span>
+              </div>
               <div className="flex flex-col gap-y-2">
                 {ThreeDayClasses.map((item, index) => (
                   <div key={index} className="flex items-center">
