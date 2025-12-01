@@ -104,11 +104,6 @@ const Footer = () => {
                 Facebook
               </Underline>
             </span>
-            <span className="p cursor-pointer">
-              <Underline bg="bg-white" href="mailto:Facudelapenna1@gmail.com">
-                Email
-              </Underline>
-            </span>
           </div>
         </div>
         <div className="col-span-6 md:col-span-2 text-end pt-[clamp(24px,80px)]">
