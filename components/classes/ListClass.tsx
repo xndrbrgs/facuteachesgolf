@@ -50,7 +50,7 @@ export const CLASS_OPTIONS: ClassOption[] = [
       "Personalized practice plan",
     ],
     ctaLabel: "Book Advanced Clinic",
-    ctaHref: "/book?type=advanced-clinic",
+    ctaHref: "mailto:Facudelapenna1@gmail.com",
   },
   {
     id: "3-day-clinic",
@@ -68,7 +68,7 @@ export const CLASS_OPTIONS: ClassOption[] = [
       "Tournament-ready routines",
     ],
     ctaLabel: "Book Advanced Clinic",
-    ctaHref: "/book?type=advanced-clinic",
+    ctaHref: "mailto:Facudelapenna1@gmail.com",
   },
   {
     id: "group-clinic",
@@ -86,7 +86,7 @@ export const CLASS_OPTIONS: ClassOption[] = [
       "Q&A and practice plans",
     ],
     ctaLabel: "Book Group Class",
-    ctaHref: "/book?type=group-clinic",
+    ctaHref: "mailto:Facudelapenna1@gmail.com",
   },
 ];
 
