@@ -30,11 +30,6 @@ const CircleToListButton: React.FC<CircleToListProps> = ({
       color: "bg-black",
     },
     {
-      label: "Corporate Event",
-      link: "https://buy.stripe.com/option2",
-      color: "bg-black",
-    },
-    {
       label: "1-Day Program",
       link: "https://buy.stripe.com/option2",
       color: "bg-black",
@@ -45,8 +40,8 @@ const CircleToListButton: React.FC<CircleToListProps> = ({
       color: "bg-black",
     },
     {
-      label: "Skillest Session",
-      link: "https://skillest.com/@facuteachesgolf",
+      label: "Corporate Event",
+      link: "https://buy.stripe.com/option2",
       color: "bg-black",
     },
   ],
