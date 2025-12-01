@@ -16,8 +16,7 @@ const ServicesPage = () => {
         <CircleButtonAnim text="Click Here To Book Now!" />
       </div>
       <ClassHero />
-      {/* <ClassList /> */}
-      <ClassesMenu />
+      <ClassList />
       <Footer />
     </main>
   );
