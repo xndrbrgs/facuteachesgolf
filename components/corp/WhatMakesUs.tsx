@@ -164,7 +164,7 @@ const WhatMakesUs = () => {
             and get a customized quote.
           </p>
           <div className="inline-flex items-center justify-center px-6 py-3 border border-black bg-white hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer">
-            <Link href="/contact">
+            <Link href="mailto:Facudelapenna1@gmail.com">
               <span>Click Here To Inquire</span>
             </Link>
           </div>

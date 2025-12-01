@@ -13,7 +13,6 @@ const CorporatePage = () => {
       </div>
       <CorpHero />
       <WhatMakesUs />
-      
       <Footer />
     </main>
   );

@@ -75,11 +75,6 @@ const Footer = () => {
                 Corporate Outings
               </Underline>
             </span>
-            <span className="p cursor-pointer">
-              <Underline bg="bg-white" href="contact">
-                contact
-              </Underline>
-            </span>
           </div>
         </div>
         <div className="col-span-6 md:col-span-2 pt-[clamp(24px,80px)]">
@@ -109,12 +104,18 @@ const Footer = () => {
                 Facebook
               </Underline>
             </span>
+            <span className="p cursor-pointer">
+              <Underline bg="bg-white" href="mailto:Facudelapenna1@gmail.com">
+                Email
+              </Underline>
+            </span>
           </div>
         </div>
         <div className="col-span-6 md:col-span-2 text-end pt-[clamp(24px,80px)]">
           <div className="flex flex-col uppercase gap-y-2">
             <p className="p text-strongtext">CONTACT</p>
             <span className="p">407 813 3044</span>
+            <span className="p">Facudelapenna1@gmail.com</span>
           </div>
         </div>
         <div className="col-span-12 pb-2 mt-[clamp(120px,180px)]">
