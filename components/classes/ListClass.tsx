@@ -2,11 +2,10 @@
 
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Mousewheel, Pagination, Navigation } from "swiper/modules";
+import { FreeMode, Mousewheel, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 type ClassOption = {
   id: string;
@@ -121,8 +120,7 @@ export default function ClassesSwiper() {
               spaceBetween={16}
               freeMode={{ enabled: true }}
               pagination={{ clickable: true, dynamicBullets: true }}
-              navigation={{ enabled: true }}
-              modules={[FreeMode, Mousewheel, Pagination, Navigation]}
+              modules={[FreeMode, Mousewheel, Pagination]}
               className="overflow-visible!"
             >
               {CLASS_OPTIONS.map((opt) => {
