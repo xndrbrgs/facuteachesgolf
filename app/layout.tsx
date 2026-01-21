@@ -37,6 +37,52 @@ export const metadata: Metadata = {
   title: "Facu Teaches Golf - Golf Lessons in Orlando, FL",
   description:
     "Facu Teaches Golf offers expert golf lessons in Orlando, helping players of all skill levels improve their swing, accuracy, and overall performance. Whether you're a beginner seeking fundamentals or an experienced golfer looking to fine-tune your game, my personalized coaching focuses on course management, swing mechanics, and mental strategy. With a passion for teaching and a friendly, results-driven approach, I provide tailored lessons that make learning enjoyable and effective. Book a session today and take your golf game to the next level!",
+  keywords: [
+    "golf lessons Orlando",
+    "golf instructor Orlando FL",
+    "golf coaching",
+    "PGA golf lessons",
+    "private golf lessons",
+    "golf swing instruction",
+    "beginner golf lessons",
+    "advanced golf training",
+    "golf course management",
+    "Orlando golf pro",
+    "golf lessons near me",
+    "Facu Teaches Golf",
+  ],
+  authors: [{ name: "Facu Teaches Golf" }],
+  creator: "Facu Teaches Golf",
+  publisher: "Facu Teaches Golf",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://facuteachesgolf.com",
+    title: "Facu Teaches Golf - Golf Lessons in Orlando, FL",
+    description:
+      "Expert golf instruction in Orlando, FL. Personalized lessons for all skill levels focused on swing mechanics, course management, and mental strategy.",
+    siteName: "Facu Teaches Golf",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Facu Teaches Golf - Golf Lessons in Orlando, FL",
+    description:
+      "Expert golf instruction in Orlando, FL. Personalized lessons for all skill levels.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://facuteachesgolf.com",
+  },
 };
 
 export default function RootLayout({
