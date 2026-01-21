@@ -110,7 +110,7 @@ const Footer = () => {
           <div className="flex flex-col uppercase gap-y-2">
             <p className="p text-strongtext">CONTACT</p>
             <span className="p">407 813 3044</span>
-            <span className="p">Facudelapenna1@gmail.com</span>
+            <span className="copy sm:p">Facudelapenna1@gmail.com</span>
           </div>
         </div>
         <div className="col-span-12 pb-2 mt-[clamp(120px,180px)]">
