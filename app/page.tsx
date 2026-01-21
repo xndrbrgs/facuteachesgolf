@@ -17,7 +17,7 @@ export default function HomePage() {
       <Delivery />
       <WhoAmI />
       <VideoSection />
-      <Reviews />
+      {/* <Reviews /> */}
       <SchoolSection />
       <Footer />
     </main>
