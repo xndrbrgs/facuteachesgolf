@@ -56,7 +56,7 @@ const EventsPageIntro = ({ events }: any) => {
           )}
 
           <Link href={`/events/${event.id}`}>
-            <button className="border rounded px-4 py-2 mt-4 hover:bg-black hover:text-white duration-300 transition hover:cursor-pointer">
+            <button className="border rounded px-4 py-2 mt-4 hover:bg-black hover:text-white duration-300 transition hover:cursor-pointer w-full">
               <span className="text-sm">Click Here to View</span>
             </button>
           </Link>
