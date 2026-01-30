@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import { ReactLenis } from "@/lib/lenis/lenis";
 import { ViewTransitions } from "next-view-transitions";
+import { ClerkProvider } from "@clerk/nextjs";
+import { Toaster } from "@/components/ui/sonner"
 
 const messinaSansRegular = localFont({
   src: "../public/fonts/MessinaSans-Regular.otf",
@@ -119,17 +121,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
-      <html lang="en">
-        <ReactLenis root>
-          <body
-            className={`${messinaSansRegular.variable} ${messinaSansBook.variable} ${messinaSansMonoRegular.variable} ${banditCondensed.variable} antialiased relative max-w-[96rem] mx-auto`}
-          >
-            <Navbar />
-            {children}
-          </body>
-        </ReactLenis>
-      </html>
-    </ViewTransitions>
+    <ClerkProvider>
+      <ViewTransitions>
+        <html lang="en">
+          <ReactLenis root>
+            <body
+              className={`${messinaSansRegular.variable} ${messinaSansBook.variable} ${messinaSansMonoRegular.variable} ${banditCondensed.variable} antialiased relative max-w-[96rem] mx-auto`}
+            >
+              <Navbar />
+              {children}
+               <Toaster />
+            </body>
+          </ReactLenis>
+        </html>
+      </ViewTransitions>
+    </ClerkProvider>
   );
 }
