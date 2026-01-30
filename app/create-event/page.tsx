@@ -10,25 +10,23 @@ import { redirect } from "next/navigation";
 
 export default async function AdminEventsPage() {
   const user = await currentUser();
-  if (!user) {
-    return <div>User not found</div>;
-  }
+
   const adminUser = await isAdmin();
 
-  if (!adminUser) {
+  if (!adminUser && !user) {
     return redirect("/");
   }
 
-  const events = (
-    await prisma.event.findMany({
-      select: { id: true, title: true, slug: true },
-      orderBy: { date: "asc" },
-    })
-  ).map((event) => ({
-    id: event.id,
-    name: event.title, // Map 'title' to 'name'
-    slug: event.slug,
-  }));
+  // const events = (
+  //   await prisma.event.findMany({
+  //     select: { id: true, title: true, slug: true },
+  //     orderBy: { date: "asc" },
+  //   })
+  // ).map((event) => ({
+  //   id: event.id,
+  //   name: event.title, // Map 'title' to 'name'
+  //   slug: event.slug,
+  // }));
 
   return (
     <main className="relative bg-[#ecece9] text-black px-[clamp(16px,40px)] w-full">
