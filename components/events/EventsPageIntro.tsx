@@ -55,11 +55,11 @@ const EventsPageIntro = ({ events }: any) => {
             </div>
           )}
 
-          <button className="border rounded px-4 py-2 mt-4 hover:bg-black hover:text-white duration-300 transition hover:cursor-pointer">
-            <Link href={`/events/${event.id}`}>
+          <Link href={`/events/${event.id}`}>
+            <button className="border rounded px-4 py-2 mt-4 hover:bg-black hover:text-white duration-300 transition hover:cursor-pointer">
               <span className="text-sm">Click Here to View</span>
-            </Link>
-          </button>
+            </button>
+          </Link>
 
           <p className="text-gray-500 mt-4 text-end text-xs">
             {new Date(event.date).toLocaleString()}
