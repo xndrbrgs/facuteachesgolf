@@ -9,9 +9,13 @@ import Image from "next/image";
 import { redirect } from "next/navigation";
 
 export default async function AdminEventsPage() {
-  const user = await isAdmin();
+  // const user = await currentUser();
+  // if (!user) {
+  //   return <div>User not found</div>;
+  // }
+  const adminUser = await isAdmin();
 
-  if (!user) {
+  if (!adminUser) {
     return redirect("/");
   }
 
