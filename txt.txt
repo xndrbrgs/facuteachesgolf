@@ -1,0 +1,12 @@
+# Clerk 
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_YWRlcXVhdGUtbGlnZXItMzUuY2xlcmsuYWNjb3VudHMuZGV2JA
+CLERK_SECRET_KEY=sk_test_UQrigBvvgcOEAXtEiqbsgledWGQXtydBYln26M1OY5
+
+NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL=/admin/create-event
+NEXT_PUBLIC_CLERK_SIGN_UP_FORCE_REDIRECT_URL=/admin/create-event
+
+# Neon 
+DATABASE_URL="postgresql://neondb_owner:npg_LxFarV3pTfM4@ep-dawn-bonus-ahd5vs9e-pooler.c-3.us-east-1.aws.neon.tech/neondb?sslmode=verify-full&channel_binding=require"
+
+# UploadThing
+UPLOADTHING_TOKEN='eyJhcGlLZXkiOiJza19saXZlXzQ5MTAwN2FjYTI2YWE0MjAwZjc0ZDQ5NDIwZGI5YjAxMjE0MThlODg3NzgwZmM0YzlkNjRiZjZjMDYyM2MzM2YiLCJhcHBJZCI6ImNkZWt3cWd0aWQiLCJyZWdpb25zIjpbInNlYTEiXX0='
