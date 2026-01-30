@@ -15,6 +15,10 @@ const nextConfig: any = {
       },
       {
         protocol: "https",
+        hostname: "cdekwqgtid.ufs.sh",
+      },
+      {
+        protocol: "https",
         hostname: "i.ibb.co",
       },
     ],

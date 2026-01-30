@@ -21,6 +21,7 @@ model Event {
   location    String?
   price       String?
   spots       String?
+  stripeLink  String?
   date        DateTime
   imageUrl    String?
   createdBy   String
