@@ -4,6 +4,7 @@ import Footer from "@/components/footer/Footer";
 import CircleButtonAnim from "@/components/anims/CircleButton";
 import { prisma } from "@/lib/prisma";
 import { Link } from "next-view-transitions";
+import EventsPageIntro from "@/components/events/EventsPageIntro";
 
 export default async function EventsPage() {
   const events = await prisma.event.findMany({
@@ -31,39 +32,7 @@ export default async function EventsPage() {
         </h1>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 pb-[clamp(32px,64px)]">
-        {events.map((event: any) => (
-          <div
-            key={event.id}
-            className="relative border p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between"
-          >
-            <h2 className="h2">{event.title}</h2>
-
-            {event.imageUrl && (
-              <div className="relative w-full h-90 mt-4 overflow-hidden">
-                <div className="absolute w-full h-90 inset-0 hover:scale-105 transition transform duration-500">
-                  <Image
-                    src={event.imageUrl}
-                    alt={event.id}
-                    className="w-full object-cover"
-                    fill
-                  />
-                </div>
-              </div>
-            )}
-
-            <button className="border rounded px-4 py-2 mt-4 hover:bg-black hover:text-white duration-300 transition hover:cursor-pointer">
-              <Link href={`/events/${event.id}`}>
-                <span className="text-sm">Click Here to View</span>
-              </Link>
-            </button>
-
-            <p className="text-gray-500 mt-4 text-end text-xs">
-              {new Date(event.date).toLocaleString()}
-            </p>
-          </div>
-        ))}
-      </div>
+      <EventsPageIntro events={events} />
       <Footer />
     </main>
   );
