@@ -5,6 +5,8 @@ import CircleButtonAnim from "@/components/anims/CircleButton";
 import { prisma } from "@/lib/prisma";
 import EventsPageIntro from "@/components/events/EventsPageIntro";
 
+export const dynamic = "force-dynamic";
+
 export default async function EventsPage() {
   const events = await prisma.event.findMany({
     orderBy: { date: "desc" },
