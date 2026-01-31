@@ -10,29 +10,29 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const EventsPageIntro = ({ events }: any) => {
-  const sectionRef = useRef<HTMLDivElement | null>(null);
+  // const sectionRef = useRef<HTMLDivElement | null>(null);
 
-  useGSAP(
-    () => {
-      // Animate each child element within the section on page load
-      const elements = sectionRef.current?.querySelectorAll("div") || [];
-      elements.forEach((el, index) => {
-        gsap.fromTo(
-          el,
-          {
-            autoAlpha: 0,
-            y: 50, // Start slightly below
-          },
-          {
-            autoAlpha: 1,
-            y: 0, // Move to original position
-            duration: 1,
-          }
-        );
-      });
-    },
-    { scope: sectionRef }
-  );
+  // useGSAP(
+  //   () => {
+  //     // Animate each child element within the section on page load
+  //     const elements = sectionRef.current?.querySelectorAll("div") || [];
+  //     elements.forEach((el, index) => {
+  //       gsap.fromTo(
+  //         el,
+  //         {
+  //           autoAlpha: 0,
+  //           y: 50, // Start slightly below
+  //         },
+  //         {
+  //           autoAlpha: 1,
+  //           y: 0, // Move to original position
+  //           duration: 1,
+  //         }
+  //       );
+  //     });
+  //   },
+  //   { scope: sectionRef }
+  // );
   return (
     <div className="grid md:grid-cols-3 gap-6 pb-[clamp(32px,64px)]">
       {events.map((event: any) => (

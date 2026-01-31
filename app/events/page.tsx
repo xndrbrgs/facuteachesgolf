@@ -3,7 +3,6 @@ import Image from "next/image";
 import Footer from "@/components/footer/Footer";
 import CircleButtonAnim from "@/components/anims/CircleButton";
 import { prisma } from "@/lib/prisma";
-import { Link } from "next-view-transitions";
 import EventsPageIntro from "@/components/events/EventsPageIntro";
 
 export default async function EventsPage() {
