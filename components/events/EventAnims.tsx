@@ -25,8 +25,6 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function EventAnims({ event }: Props) {
   const sectionRef = useRef<HTMLDivElement | null>(null);
-  const wrapperRef = useRef<HTMLDivElement | null>(null);
-  const displayRef = useRef<HTMLHeadingElement | null>(null);
 
   useGSAP(
     () => {
@@ -68,10 +66,10 @@ export default function EventAnims({ event }: Props) {
           <p className="text-gray-700 h5">Price</p>
           <h2 className="h5 font-bold">{event.price}$</h2>
         </div>
-        <div className="flex flex-col">
+        {/* <div className="flex flex-col">
           <p className="text-gray-700 h5">Open Spots</p>
           <h2 className="h5 font-bold">{event.spots}</h2>
-        </div>
+        </div> */}
         <div className="flex flex-col">
           <p className="text-gray-700 h5">Date</p>
           <h2 className="h5 font-bold">
@@ -102,9 +100,9 @@ export default function EventAnims({ event }: Props) {
           />
         </div>
       </section>
-      <section className="py-[clamp(16px,48px)]">
+      <section className="py-[clamp(36px,48px)]">
         <h1 className="h1 mb-4">Event Details</h1>
-        <h2 className="h2">{event.description}</h2>
+        <h2 className="h2-alt">{event.description}</h2>
       </section>
     </div>
   );
