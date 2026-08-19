@@ -11,6 +11,7 @@
   --strong: #323232;
   --strongtext: #727268;
   --grayback: #f4f4ea;
+  --accent: #d9f36a;
 }
 
 @theme inline {
@@ -19,6 +20,7 @@
   --color-strong: var(--strong);
   --color-strongtext: var(--strongtext);
   --color-grayback: var(--grayback);
+  --color-accent: var(--accent);
   --font-sansMono: var(--font-sansMono);
   --font-regular: var(--font-regular);
   --font-book: var(--font-book);
@@ -73,6 +75,25 @@ body {
   filter: blur(20px);
 }
 
+.gradient {
+  background: #111111;
+background: radial-gradient(circle at 50% 0%, #273426 0, transparent 45%);
+}
+
+.price-card {
+  background: #121916;
+  transition: background 1.5s ease;
+}
+
+/* .price-card:hover {
+  background: #111111;
+  z-index: 80;
+  background: radial-gradient(
+    circle at 50% 0%,
+    #273426 0%,
+    transparent 45%
+  );
+} */
 
 .display {
   @apply text-[clamp(80px,186px)] leading-[0.80] font-bandit uppercase;
@@ -95,7 +116,7 @@ body {
 }
 
 .p {
-  @apply text-[clamp(14px,16px)] leading-[1.2] font-sansMono;
+  @apply text-[clamp(14px,18px)] leading-[1.2] font-sansMono;
 }
 
 .copy {

@@ -84,7 +84,7 @@ const Navbar = () => {
             <div>
               <div className="flex gap-x-4 mb-4">
                 <a
-                  href="https://www.instagram.com/facuteachesgolf/"
+                  href="https://www.instagram.com/facundodelapenna/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >

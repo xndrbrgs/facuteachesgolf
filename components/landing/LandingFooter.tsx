@@ -12,7 +12,7 @@ import { useRef } from "react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const Footer = () => {
+const LandingFooter = () => {
   const footerRef = useRef(null);
 
   useGSAP(
@@ -43,7 +43,7 @@ const Footer = () => {
       className="relative bg-[#f4f4ea] text-white overflow-hidden"
       ref={footerRef}
     >
-      <div className="relative grid grid-cols-12 bg-background rounded-t-4xl px-[clamp(16px,40px)]">
+      <div className="relative grid grid-cols-12 bg-background px-[clamp(16px,40px)]">
         <div className="col-span-12 md:col-span-6 pt-[clamp(36px,80px)]">
           <div className="relative size-15 md:size-30">
             <Image
@@ -135,4 +135,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default LandingFooter;

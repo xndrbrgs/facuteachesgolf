@@ -36,20 +36,19 @@ const WhoAmI = () => {
   return (
     <section className="relative w-full">
       <div
-        className="relative flex flex-col justify-center my-[clamp(80px,120px)] px-[clamp(16px,40px)]"
+        className="relative flex flex-col justify-center my-[clamp(80px,120px)] px-[clamp(16px,40px)] gap-y-4"
         ref={container}
       >
-        <h1 className="h1">WHO AM I</h1>
-        <div className="py-[clamp(60px,96px)] flex flex-col gap-y-[clamp(24px,32px)]">
+        <h1 className="p text-accent">WHO AM I</h1>
+        <div className="pb-[clamp(60px,96px)] flex flex-col gap-y-[clamp(24px,32px)]">
           <span className="h4" id="span">
-            I help companies and executives create world-class golf
-            experiences—drawing on years of inside-the-ropes expertise from the
-            PGA Tour, LPGA Tour, and Korn Ferry Tour.
+            Facundo Delapenna is a former professional golfer creating
+            world-class golf experiences—drawing on years of inside-the-ropes
+            expertise from the PGA Tour, LPGA Tour, and Korn Ferry Tour.
           </span>
           <span className="h4" id="span">
-            From tailored golf schools to premium corporate events, I bring the
-            precision, strategy, and professionalism of tour-level golf to your
-            business gatherings.
+            His instruction combines practical coaching with an understanding of
+            how high-level players move, practice, and manage the game.
           </span>
         </div>
       </div>
