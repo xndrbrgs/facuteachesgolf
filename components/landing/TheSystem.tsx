@@ -62,7 +62,7 @@ const TheSystem = () => {
     },
   ];
   return (
-    <section className="relative w-full px-[clamp(16px,40px)] my-[clamp(64px,140px)] ">
+    <section id="program" className="relative w-full px-[clamp(16px,40px)] my-[clamp(64px,140px)] ">
       <div className="uppercase text-accent">The System</div>
       <div className="h4">Six weeks. One clear plan.</div>
       <div className="grid grid-cols-12 gap-6 w-full pt-[clamp(16px,40px)]">

@@ -5,7 +5,8 @@ import Navbar from "@/components/navbar/Navbar";
 import { ReactLenis } from "@/lib/lenis/lenis";
 import { ViewTransitions } from "next-view-transitions";
 import { ClerkProvider } from "@clerk/nextjs";
-import { Toaster } from "@/components/ui/sonner"
+import { Toaster } from "@/components/ui/sonner";
+import SmoothScrollLinks from "@/components/anims/SmoothScroll";
 
 const messinaSansRegular = localFont({
   src: "../public/fonts/MessinaSans-Regular.otf",
@@ -128,9 +129,10 @@ export default function RootLayout({
             <body
               className={`${messinaSansRegular.variable} ${messinaSansBook.variable} ${messinaSansMonoRegular.variable} ${banditCondensed.variable} antialiased relative max-w-[96rem] mx-auto`}
             >
+              <SmoothScrollLinks />
               <Navbar />
               {children}
-               <Toaster />
+              <Toaster />
             </body>
           </ReactLenis>
         </html>

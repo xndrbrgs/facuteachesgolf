@@ -1,8 +1,11 @@
+import CounterUp from "../anims/CounterUp";
+import HoverTextButton from "../anims/HoverButton";
+
 const ChooseCoaching = () => {
   const weeks = [
     {
       title: "Program",
-      price: "$149",
+      price: "149",
       subtitle:
         "For golfers who want the complete system and a structured plan.",
       list: [
@@ -16,7 +19,7 @@ const ChooseCoaching = () => {
     },
     {
       title: "Program + Feedback",
-      price: "$249",
+      price: "249",
       subtitle:
         "For golfers who want the system plus personalized swing guidance.",
       list: [
@@ -30,7 +33,7 @@ const ChooseCoaching = () => {
     },
     {
       title: "Private Online",
-      price: "$399",
+      price: "399",
       subtitle:
         "For golfers who want more direct access and individualized coaching.",
       list: [
@@ -45,7 +48,10 @@ const ChooseCoaching = () => {
   ];
 
   return (
-    <section className="relative w-full px-[clamp(16px,40px)] my-[clamp(64px,140px)] ">
+    <section
+      id="pricing"
+      className="relative w-full px-[clamp(16px,40px)] my-[clamp(64px,140px)] "
+    >
       <style>{`
         @keyframes border-spin {
           to { transform: rotate(360deg); }
@@ -83,7 +89,9 @@ const ChooseCoaching = () => {
             <div className="relative z-10 price-card bg-background border-[#26302b] border rounded-[11px] p-6 text-center h-full">
               <div className="flex flex-col gap-2">
                 <p className="text-accent uppercase">{week.title}</p>
-                <p className="h1 py-[clamp(16px,24px)]">{week.price}</p>
+                <p className="h1 py-[clamp(16px,24px)]">
+                  $<CounterUp target={week.price} />
+                </p>
                 <p className="p">{week.subtitle}</p>
               </div>
               <div className="pt-4">
@@ -94,11 +102,7 @@ const ChooseCoaching = () => {
                 </ol>
               </div>
               {week.cta && week.href && (
-                <button className="mt-[clamp(24px,48px)] bg-accent text-black py-2 px-4 rounded-full">
-                  <a className="inline-block uppercase" href={week.href}>
-                    {week.cta}
-                  </a>
-                </button>
+               <HoverTextButton text={week.cta} href={week.href} />
               )}
             </div>
           </div>

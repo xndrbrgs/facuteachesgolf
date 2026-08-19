@@ -32,6 +32,10 @@ body {
   font-family: var(--font-sansMono);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .menu {
   visibility: hidden;
 }
@@ -74,7 +78,7 @@ body {
 }
 .gradient {
   background: #111111;
-background: radial-gradient(circle at 50% 0%, #273426 0, transparent 45%);
+  background: radial-gradient(circle at 50% 0%, #273426 0, transparent 45%);
 }
 
 .price-card {
@@ -93,11 +97,11 @@ background: radial-gradient(circle at 50% 0%, #273426 0, transparent 45%);
 } */
 
 .display {
-  @apply text-[clamp(80px,186px)] leading-[0.80] font-bandit uppercase;
+  @apply text-[clamp(80px,240px)] leading-[0.80] font-bandit uppercase;
 }
 
 .h1 {
-  @apply text-[clamp(54px,6.125rem)] leading-[0.86] font-bandit uppercase;
+  @apply text-[clamp(54px,98px)] leading-[0.86] font-bandit uppercase;
 }
 
 .h2 {
@@ -110,6 +114,10 @@ background: radial-gradient(circle at 50% 0%, #273426 0, transparent 45%);
 
 .h3 {
   @apply text-[clamp(24px,50px)] leading-[.95] font-bandit;
+}
+
+.btn {
+  @apply text-[clamp(42px,50px)] leading-[.95] font-bandit;
 }
 
 .h4 {

@@ -1,4 +1,3 @@
-import CircleButtonAnim from "@/components/anims/CircleButton";
 import LandingFooter from "@/components/landing/LandingFooter";
 import WhoAmI from "@/components/hero/WhoAmI";
 import ChooseCoaching from "@/components/landing/ChooseCoaching";
@@ -6,12 +5,13 @@ import LandingHero from "@/components/landing/LandingHero";
 import LandingQuestions from "@/components/landing/LandingQuestions";
 import TheProblem from "@/components/landing/TheProblem";
 import TheSystem from "@/components/landing/TheSystem";
+import PlainCircle from "@/components/anims/PlainCircle";
 
 const LandingPage = () => {
   return (
     <main className="relative overflow-x-hidden bg-background text-white w-full">
       <div className="fixed bottom-[clamp(120px,160px)] right-[clamp(40px,80px)] z-80">
-        <CircleButtonAnim text="Click Here To Book Now!" />
+         <PlainCircle text="BOOK CLASS" />
       </div>
       <LandingHero />
       <TheProblem />

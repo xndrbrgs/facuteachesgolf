@@ -69,34 +69,36 @@ const LandingHero = () => {
         className="absolute inset-0 gradient pointer-events-none z-0"
       />
 
-      <div className="relative z-10 pt-[clamp(56px,96px)] col-span-12">
-        <div className="flex flex-col text-center w-full gap-4">
-          <p ref={eyebrowRef} className="uppercase text-accent copy">
-            6-Week Online Golf Program
-          </p>
-          <h1 ref={headingRef} className="display">
-            Stop Guessing. <br />
-            Start Improving.
-          </h1>
-          <div className="grid grid-cols-12">
-            <div className="w-full col-span-12 md:col-start-4 md:col-end-10">
-              <p ref={paragraphRef} className="p">
-                A structured golf-improvement system built to help amateur
-                golfers practice with purpose, understand their swing, and
-                take better golf to the course.
-              </p>
+      <div className="relative z-10 col-span-12">
+        <div className="flex flex-col items-center justify-center h-full">
+          <div className="flex flex-col text-center w-full gap-4">
+            <p ref={eyebrowRef} className="uppercase text-accent copy">
+              6-Week Online Golf Program
+            </p>
+            <h1 ref={headingRef} className="display">
+              Stop Guessing. <br />
+              Start Improving.
+            </h1>
+            <div className="grid grid-cols-12">
+              <div className="w-full col-span-12 md:col-start-4 md:col-end-10">
+                <p ref={paragraphRef} className="p">
+                  A structured golf-improvement system built to help amateur
+                  golfers practice with purpose, understand their swing, and
+                  take better golf to the course.
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            ref={buttonsRef}
-            className="flex flex-col md:flex-row justify-center gap-4 mt-4 md:mt-0"
-          >
-            <button className="rounded-full bg-accent text-black px-6 py-3 hover:bg-accent-dark transition hover:cursor-pointer hover:scale-105 font-semibold">
-              <p>Start Your Transformation</p>
-            </button>
-            <button className="rounded-full bg-black text-white border-1 px-6 py-3 hover:bg-accent-dark transition hover:cursor-pointer hover:scale-105 font-semibold">
-              <p>See What's Inside</p>
-            </button>
+            <div
+              ref={buttonsRef}
+              className="flex flex-col md:flex-row justify-center gap-4 mt-4 md:mt-0"
+            >
+              <a href="#pricing" className="rounded-full bg-accent text-black px-6 py-3 hover:bg-accent-dark transition hover:cursor-pointer hover:scale-105 font-semibold">
+                <p>Start Your Transformation</p>
+              </a>
+              <a href="#program" className="rounded-full bg-black text-white border-1 px-6 py-3 hover:bg-accent-dark transition hover:cursor-pointer hover:scale-105 font-semibold">
+                <p>See What's Inside</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
