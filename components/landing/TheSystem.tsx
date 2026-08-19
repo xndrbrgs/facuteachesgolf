@@ -13,12 +13,7 @@ const TheSystem = () => {
     {
       title: "WEEK 02",
       subtitle: "Build Your Backswing",
-      list: [
-        "Takeaway",
-        "Rotation & space",
-        "Arm structure",
-        "Top position",
-      ],
+      list: ["Takeaway", "Rotation & space", "Arm structure", "Top position"],
     },
     {
       title: "WEEK 03",
@@ -62,12 +57,18 @@ const TheSystem = () => {
     },
   ];
   return (
-    <section id="program" className="relative w-full px-[clamp(16px,40px)] my-[clamp(64px,140px)] ">
+    <section
+      id="program"
+      className="relative w-full px-[clamp(16px,40px)] my-[clamp(64px,140px)] "
+    >
       <div className="uppercase text-accent">The System</div>
       <div className="h4">Six weeks. One clear plan.</div>
-      <div className="grid grid-cols-12 gap-6 w-full pt-[clamp(16px,40px)]">
+      <div className="grid grid-cols-12 gap-6 w-full pt-[clamp(16px,40px)] mt-8 md:mt-0">
         {weeks.map((week) => (
-          <div className="col-span-4 bg-[#121916] border-[#26302b] border rounded-xl p-6" key={week.title}>
+          <div
+            className="col-span-12 md:col-span-4 bg-[#121916] border-[#26302b] border rounded-xl p-6"
+            key={week.title}
+          >
             <div className="flex flex-col gap-2">
               <p className="text-accent uppercase">{week.title}</p>
               <p className="p font-semibold">{week.subtitle}</p>

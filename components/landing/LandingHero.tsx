@@ -73,7 +73,7 @@ const LandingHero = () => {
         <div className="flex flex-col items-center justify-center h-full">
           <div className="flex flex-col text-center w-full gap-4">
             <p ref={eyebrowRef} className="uppercase text-accent copy">
-              6-Week Online Golf Program
+              Facu Delapenna 6-Week Online Golf Program
             </p>
             <h1 ref={headingRef} className="display">
               Stop Guessing. <br />
