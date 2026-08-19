@@ -35,8 +35,8 @@ const PlainCircle: React.FC<PlainCircleProps> = ({
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className={`${bgColor} ${textColor} rounded-full size-[clamp(120px,128px)] flex items-center justify-center uppercase font-semibold hover:scale-110 transition btn cursor-pointer`}
-        style={{ width, height: width }}
+        className={`${bgColor} ${textColor} rounded-full size-[clamp(120px,180px)] flex items-center justify-center uppercase font-semibold hover:scale-110 transition btn cursor-pointer`}
+        // style={{ width, height: width }}
       >
         {text}
       </a>
