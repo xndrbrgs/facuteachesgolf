@@ -4,7 +4,6 @@
 @import "uploadthing/tw/v4";
 @source "../node_modules/@uploadthing/react/dist"; /** <-- depends on your project structure */
 
-
 :root {
   --foreground: ##ecece9;
   --background: #111111;
@@ -47,7 +46,6 @@ body {
   text-shadow: 0px 0.8em 0px var(--foreground);
 }
 
-
 .blur-container {
   position: relative;
 }
@@ -74,7 +72,6 @@ body {
   background: linear-gradient(to left, #f4f4ea, transparent);
   filter: blur(20px);
 }
-
 .gradient {
   background: #111111;
 background: radial-gradient(circle at 50% 0%, #273426 0, transparent 45%);
@@ -100,11 +97,15 @@ background: radial-gradient(circle at 50% 0%, #273426 0, transparent 45%);
 }
 
 .h1 {
-  @apply text-[clamp(2.5rem,6.125rem)] leading-[0.86] font-bandit uppercase;
+  @apply text-[clamp(54px,6.125rem)] leading-[0.86] font-bandit uppercase;
 }
 
 .h2 {
-  @apply text-[clamp(54px,64px)] leading-[.95] font-bandit;
+  @apply text-[clamp(36px,64px)] leading-[.95] font-bandit;
+}
+
+.h2-alt {
+  @apply text-[clamp(18px,48px)] leading-[1.2] font-book;
 }
 
 .h3 {

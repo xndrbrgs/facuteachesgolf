@@ -1,34 +1,49 @@
+import AppearText from "@/components/anims/AppearText";
+import CircleButtonAnim from "@/components/anims/CircleButton";
+import EventAnims from "@/components/events/EventAnims";
+import Footer from "@/components/footer/Footer";
+import { prisma } from "@/lib/prisma";
+import { Link } from "next-view-transitions";
+import Image from "next/image";
+import { notFound } from "next/navigation";
 
-// import prisma from "@/lib/prisma";
-// import { notFound } from "next/navigation";
+type Props = { params: { id: string } };
 
-// export default async function EventPage({ params }: { params: { id: string } }) {
-//   const event = await prisma.event.findUnique({
-//     where: { id: params.id },
-//   });
+export default async function EventPage({ params }: Props) {
+  const { id } = await params;
 
-//   if (!event) return notFound();
+  const event = await prisma.event.findUnique({
+    where: { slug: id },
+  });
 
-//   return (
-//     <div className="max-w-3xl mx-auto py-10 space-y-6">
+  if (!event) return notFound();
 
-//       <h1 className="text-4xl font-bold">{event.title}</h1>
+  return (
+    <main className="relative overflow-x-hidden bg-[#ecece9] text-black px-[clamp(16px,40px)] w-full min-h-screen">
+      <div className="fixed bottom-[clamp(120px,160px)] right-[clamp(40px,80px)] z-80">
+        <CircleButtonAnim text="Click Here To Book Now!" />
+      </div>
+      <div className="relative size-10 md:size-20  pt-[clamp(16px,40px)]">
+        <Image
+          src={"/images/svg/FACUCIRCLEBlack.svg"}
+          fill
+          alt="Facu Logo Large Watermark"
+          className="object-contain"
+        />
+      </div>
+      <div className="py-[clamp(8px,16px)]">
+        <Link href="/events" className="underline hover:opacity-70">
+          <span className="p">← Back to events</span>
+        </Link>
+      </div>
+      <div className="py-[clamp(16px,48px)]">
+        <h1 className="display">
+          <AppearText>{event.title}</AppearText>
+        </h1>
+      </div>
 
-//       {event.imageUrl && (
-//         <img
-//           src={event.imageUrl}
-//           alt={event.title}
-//           className="w-full rounded-lg"
-//         />
-//       )}
-
-//       <p className="text-gray-500">
-//         {new Date(event.date).toLocaleString()}
-//       </p>
-
-//       <p className="text-lg leading-relaxed">{event.description}</p>
-
-//       {/* You can add registration buttons, maps, etc. here */}
-//     </div>
-//   );
-// }
+      <EventAnims event={event} />
+      <Footer />
+    </main>
+  );
+}

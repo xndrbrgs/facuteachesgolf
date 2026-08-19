@@ -28,18 +28,16 @@ import { UploadButton } from "@/utils/uploadthing";
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   description: z.string().min(10, "Description must be at least 10 characters"),
-  location: z.string().min(10, "Description must be at least 10 characters"),
+  slug: z.string(),
+  location: z.string().min(3, "Description must be at least 10 characters"),
   price: z.string().min(1, "Price must be at least 1 character"),
   spots: z.string().min(1, "Spots must be at least 1 character"),
   date: z.date({ error: "Please pick a date" }),
+  stripeLink: z.string().min(1, "Please insert Stripe Link url!"),
   time: z
     .string()
     .regex(/^([01]\d|2[0-3]):([0-5]\d)$/, "Time must be HH:MM (24-hr)"),
-  imageUrl: z
-    .string()
-    .url("Must be a valid URL")
-    .optional()
-    .or(z.literal("").transform(() => undefined)),
+  imageUrl: z.string().url("Must be a valid URL"),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -67,9 +65,11 @@ export default function CreateEventForm() {
       location: "",
       price: "",
       spots: "",
+      slug: "",
       date: undefined,
       time: "18:00",
       imageUrl: "",
+      stripeLink: "",
     },
   });
 
@@ -90,7 +90,12 @@ export default function CreateEventForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           title: values.title,
+          slug: previewSlug,
           description: values.description,
+          location: values.location,
+          price: values.price,
+          spots: values.spots,
+          stripeLink: values.stripeLink,
           date: combined.toISOString(), // send ISO
           imageUrl: values.imageUrl,
         }),
@@ -186,11 +191,29 @@ export default function CreateEventForm() {
             name="price"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Price</FormLabel>
+                <FormLabel>Price Per Person</FormLabel>
                 <FormControl>
                   <Textarea
                     rows={5}
                     placeholder="What is the price for this event? (Ex: 20)"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          {/* Price */}
+          <FormField
+            control={form.control}
+            name="stripeLink"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Stripe Link</FormLabel>
+                <FormControl>
+                  <Textarea
+                    rows={5}
+                    placeholder="Insert the Stripe Link URL here."
                     {...field}
                   />
                 </FormControl>
@@ -221,16 +244,20 @@ export default function CreateEventForm() {
             control={form.control}
             name="date"
             render={({ field }) => (
-              <FormItem className="flex flex-col">
+              <FormItem>
                 <FormLabel>Date</FormLabel>
                 <FormControl>
-                  <Calendar
-                    mode="single"
-                    selected={field.value}
-                    onSelect={(d) => field.onChange(d)}
-                    // Optional: prevent picking past dates or very old dates
-                    disabled={(date) => date < new Date("2000-01-01")}
-                    initialFocus
+                  <Input
+                    type="date"
+                    value={
+                      field.value ? field.value.toISOString().split("T")[0] : ""
+                    }
+                    onChange={(e) => {
+                      const date = e.target.value
+                        ? new Date(e.target.value)
+                        : undefined;
+                      field.onChange(date);
+                    }}
                   />
                 </FormControl>
                 <FormMessage />

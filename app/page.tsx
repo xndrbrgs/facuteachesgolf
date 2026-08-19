@@ -1,4 +1,5 @@
-import CircleButtonAnim from "@/components/anims/CircleButton";
+// import CircleButtonAnim from "@/components/anims/CircleButton";
+import PlainCircle from "@/components/anims/PlainCircle";
 import Delivery from "@/components/delivery/Delivery";
 import Footer from "@/components/footer/Footer";
 import VideoSection from "@/components/gallery/VideoSection";
@@ -10,14 +11,13 @@ import SchoolSection from "@/components/school/SchoolSection";
 export default function HomePage() {
   return (
     <main className="relative overflow-x-hidden bg-background text-white w-full">
-      <div className="fixed bottom-[clamp(120px,160px)] right-[clamp(40px,80px)] z-80">
-        <CircleButtonAnim text="Click Here To Book Now!" />
+      <div className="fixed bottom-[clamp(20px,40px)] left-1/2 transform -translate-x-1/2 z-80">
+        <PlainCircle text="Click To Book!" />
       </div>
       <CorpHero />
       <Delivery />
       <WhoAmI />
       <VideoSection />
-      {/* <Reviews /> */}
       <SchoolSection />
       <Footer />
     </main>

@@ -10,34 +10,44 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const formData = await req.formData();
+  const formData = await req.json();
 
-  const title = formData.get("title") as string;
-  const slug = formData.get("title") as string;
-  const description = formData.get("description") as string;
-  const location = formData.get("location") as string;
-  const price = formData.get("price") as string;
-  const spots = formData.get("spots") as string;
-  const date = formData.get("date") as string;
-  const imageUrl = formData.get("imageUrl") as string | null;
+  console.log("Form Data:", formData);
+
+  const {
+    title,
+    description,
+    slug,
+    location,
+    price,
+    spots,
+    date,
+    imageUrl,
+    stripeLink
+  } = formData;
 
   if (!title || !description || !date) {
     return NextResponse.json({ error: "Missing fields" }, { status: 400 });
   }
 
+
   const event = await prisma.event.create({
     data: {
+      id: slug,
       title,
       description,
       slug,
       location,
       price,
       spots,
+      stripeLink,
       date: new Date(date),
       imageUrl: imageUrl || null,
       createdBy: userId,
     },
+    select: { slug: true }, // only return what you need
   });
 
-  return NextResponse.redirect("/events");
+
+  return NextResponse.json(event, { status: 201 });
 }
