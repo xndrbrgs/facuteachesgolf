@@ -6,12 +6,16 @@ import LandingQuestions from "@/components/landing/LandingQuestions";
 import TheProblem from "@/components/landing/TheProblem";
 import TheSystem from "@/components/landing/TheSystem";
 import PlainCircle from "@/components/anims/PlainCircle";
+import CircleSmall from "@/components/landing/CircleSmall";
 
 const LandingPage = () => {
   return (
     <main className="relative overflow-x-hidden bg-background text-white w-full">
-      <div className="fixed bottom-[clamp(60px,160px)] right-[clamp(40px,80px)] z-80">
+      <div className="hidden md:block fixed bottom-[clamp(60px,160px)] right-[clamp(40px,80px)] z-80">
          <PlainCircle text="BOOK CLASS" />
+      </div>
+      <div className="block md:hidden fixed bottom-[clamp(60px,160px)] right-[clamp(40px,80px)] z-80">
+         <CircleSmall text="BOOK CLASS" />
       </div>
       <LandingHero />
       <TheProblem />
